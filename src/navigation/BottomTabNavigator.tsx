@@ -17,6 +17,7 @@ const DummyScreen = () => null;
 
 const BottomTabNavigator = () => (
   <Tab.Navigator
+    id={undefined}
     screenOptions={({ route }) => ({
       headerShown: false,
       tabBarActiveTintColor: '#60BF96',

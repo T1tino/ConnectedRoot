@@ -1,5 +1,6 @@
 // src/navigation/AppNavigator.tsx
 import React from 'react';
+// import './global.css';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -12,7 +13,11 @@ const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Welcome" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator 
+        id={undefined}
+        initialRouteName="Welcome" 
+        screenOptions={{ headerShown: false }}
+      >
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />

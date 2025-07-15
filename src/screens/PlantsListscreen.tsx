@@ -26,7 +26,7 @@ const plantsData = [
 
 const StatItem = ({ iconName, label }: { iconName: string; label: string }) => (
   <View className="flex-row items-center mr-4">
-    <Ionicons name={iconName} size={16} color="#60BF96" />
+    <Ionicons name="leaf-outline" size={24} color="green" />
     <Text className="text-xs text-gray-600 ml-1">{label}</Text>
   </View>
 );
