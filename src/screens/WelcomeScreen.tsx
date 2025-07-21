@@ -1,3 +1,4 @@
+// src/screens/WelcomeScreen.tsx
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
