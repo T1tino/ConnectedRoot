@@ -10,13 +10,13 @@ const PLANTS = [
     id: '1',
     title: 'Cactus Garden',
     description: 'Low maintenance & perfect for beginners',
-    image: require('../assets/images/plants/cactus.png'),
+    image: require('../assets/cactus.png'),
   },
   {
     id: '2',
     title: 'Fiddle Leaf',
     description: 'Lush and leafy centerpiece plant',
-    image: require('../assets/images/plants/fiddle-leaf.png'),
+    image: require('../assets/images/categoriesPlants/largePlants/LargeFiddleLeafFigBush/fiddle-leaf-fig-bush_large_burbank_white.webp'),
   },
   // Agrega más elementos simulados para el prototipo
 ];

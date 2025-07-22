@@ -1,60 +1,76 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { View, Text, Pressable } from 'react-native';
+import {
+  HomeIcon,
+  MagnifyingGlassIcon,
+  HeartIcon,
+  RectangleGroupIcon,
+  UserCircleIcon
+} from 'react-native-heroicons/outline';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
 import HomeScreen from '../screens/HomeScreen';
-import { Ionicons } from '@expo/vector-icons';
+import ExploreScreen from '../screens/ExploreScreen';
+import FavoritesScreen from '../screens/FavoritesScreen';
+import PlantsListScreen from '../screens/PlantsListScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 
-type BottomTabParamList = {
-  Home: undefined;
-  Devices: undefined;
-  Logs: undefined;
-  Settings: undefined;
-  Profile: undefined;
-};
+const Tab = createBottomTabNavigator();
 
-const Tab = createBottomTabNavigator<BottomTabParamList>();
+const CustomTabBar = ({ state, descriptors, navigation }) => {
+  const insets = useSafeAreaInsets();
 
-const DummyScreen = () => null;
+  return (
+    <View
+      className="flex-row justify-around bg-white border-t border-gray-200"
+      style={{ paddingBottom: insets.bottom, paddingTop: 10 }}
+    >
+      {state.routes.map((route, index) => {
+        const isFocused = state.index === index;
+        const onPress = () => {
+          const event = navigation.emit({
+            type: 'tabPress',
+            target: route.key,
+            canPreventDefault: true
+          });
+          if (!isFocused && !event.defaultPrevented) {
+            navigation.navigate(route.name);
+          }
+        };
 
-const BottomTabNavigator = () => (
-  <Tab.Navigator
-    id={undefined}
-    screenOptions={({ route }) => ({
-      headerShown: false,
-      tabBarActiveTintColor: '#60BF96',
-      tabBarInactiveTintColor: '#999',
-      tabBarStyle: {
-        backgroundColor: '#fff',
-        borderTopWidth: 0,
-        elevation: 5,
-        height: 65,
-        paddingBottom: 12,
-        paddingTop: 8,
-      },
-      tabBarIcon: ({ color, size }) => {
         const icons = {
-          Home: 'home-outline',
-          Devices: 'wifi-outline',
-          Logs: 'stats-chart-outline',
-          Settings: 'settings-outline',
-          Profile: 'person-outline',
-        } as const;
+          Home: <HomeIcon size={24} color={isFocused ? '#22c55e' : '#64748b'} />,
+          Explore: <MagnifyingGlassIcon size={24} color={isFocused ? '#22c55e' : '#64748b'} />,
+          Favorites: <HeartIcon size={24} color={isFocused ? '#22c55e' : '#64748b'} />,
+          Plants: <RectangleGroupIcon size={24} color={isFocused ? '#22c55e' : '#64748b'} />,
+          Profile: <UserCircleIcon size={24} color={isFocused ? '#22c55e' : '#64748b'} />,
+        };
 
         return (
-          <Ionicons
-            name={icons[route.name] as typeof icons[keyof typeof icons]}
-            size={size}
-            color={color}
-          />
+          <Pressable key={route.key} onPress={onPress} className="items-center flex-1">
+            {icons[route.name]}
+            <Text className={`text-xs ${isFocused ? 'text-green-500' : 'text-slate-500'}`}>
+              {route.name}
+            </Text>
+          </Pressable>
         );
-      },
-    })}
-  >
-    <Tab.Screen name="Home" component={HomeScreen} />
-    <Tab.Screen name="Devices" component={DummyScreen} />
-    <Tab.Screen name="Logs" component={DummyScreen} />
-    <Tab.Screen name="Settings" component={DummyScreen} />
-    <Tab.Screen name="Profile" component={DummyScreen} />
-  </Tab.Navigator>
-);
+      })}
+    </View>
+  );
+};
 
-export default BottomTabNavigator;
+export default function BottomTabNavigator() {
+  return (
+    <Tab.Navigator
+      screenOptions={{ headerShown: false }}
+      tabBar={(props) => <CustomTabBar {...props} />}
+    >
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Explore" component={ExploreScreen} />
+      <Tab.Screen name="Favorites" component={FavoritesScreen} />
+      <Tab.Screen name="Plants" component={PlantsListScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
+    </Tab.Navigator>
+  );
+}

@@ -10,13 +10,15 @@ const FAVORITES = [
     id: '1',
     name: 'Snake Plant',
     category: 'Air Purifier',
-    image: require('../assets/images/plants/snake.png'),
+    image: require('../assets/images/categoriesPlants/lowLightTolerant/LargeSnakeLaurentii/snake-plant-laurentii_large_burbank_white.webp'),
   },
   {
     id: '2',
     name: 'Peace Lily',
     category: 'Flowering Plant',
-    image: require('../assets/images/plants/peace-lily.png'),
+    // image: require('../assets/images/plants/peace-lily.png'),
+    image: require('../assets/images/Plant.png'),
+
   },
 ];
 

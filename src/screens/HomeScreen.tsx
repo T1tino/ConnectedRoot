@@ -75,7 +75,7 @@ const chartConfig = (color: string) => ({
 
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: '#f5f9f8' },
-  container: { padding: 16, paddingBottom: 32 },
+  container: { padding: 16, paddingBottom: 32, flex:1 },
   title: { fontSize: 26, fontWeight: '700', color: '#2e7d32', marginBottom: 12 },
   card: {
     backgroundColor: '#fff',
