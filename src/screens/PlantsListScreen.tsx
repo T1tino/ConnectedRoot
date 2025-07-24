@@ -1,6 +1,8 @@
+// src/screens/PlantsListScreen.tsx
 import React from 'react';
-import { View, Text, FlatList, Image, Dimensions } from 'react-native';
+import { View, Text, FlatList, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import ScreenWrapper from '../components/ScreenWrapper';
 
 const plantsData = [
   {
@@ -33,11 +35,7 @@ const StatItem = ({ iconName, label }: { iconName: string; label: string }) => (
 
 const PlantsListScreen = () => {
   return (
-    <View className="flex-1 bg-gray-50 p-4">
-      <Text className="text-2xl font-extrabold text-green-700 mb-6 text-center">
-        Plantas Supervisadas
-      </Text>
-
+    <ScreenWrapper title="Plantas Supervisadas">
       <FlatList
         data={plantsData}
         keyExtractor={(item) => item.id}
@@ -61,7 +59,7 @@ const PlantsListScreen = () => {
           </View>
         )}
       />
-    </View>
+    </ScreenWrapper>
   );
 };
 
