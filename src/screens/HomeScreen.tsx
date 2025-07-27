@@ -1,96 +1,72 @@
 // src/screens/HomeScreen.tsx
-
 import React from 'react';
-import { View, Text, StyleSheet, Image, Dimensions, ScrollView } from 'react-native';
-import { LineChart } from 'react-native-chart-kit';
+import { useNavigation } from '@react-navigation/native';
+import { TouchableOpacity, View, Text, FlatList, Image } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import ScreenWrapper from '../components/ScreenWrapper';
 
-const temperatureData = [22, 23, 21, 22, 24, 25, 24];
-const humidityData = [45, 50, 48, 46, 55, 60, 58];
-const screenWidth = Dimensions.get('window').width;
+const plantsData = [
+  {
+    id: '1',
+    name: 'Ficus Audrey',
+    species: 'Ficus benghalensis',
+    image: require('../assets/images/categoriesPlants/largePlants/LargeFicusAudrey/ficus-audrey_burbank-white_gallery_all_all_01.webp'),
+    temp: '18-25°C',
+    humidity: '60%',
+    moisture: 'Medium',
+  },
+  {
+    id: '2',
+    name: 'Snake Plant',
+    species: 'Sansevieria trifasciata',
+    image: require('../assets/images/categoriesPlants/largePlants/LargeFicusAudrey/ficus-audrey-burbank-almond_arrowhead-dracaena-marginata-pentagonal-planter_gallery_all_all_01.webp'),
+    temp: '15-27°C',
+    humidity: 'Low',
+    moisture: 'Low',
+  },
+  // Más plantas aquí
+];
 
-export default function HomeScreen() {
+const StatItem = ({ iconName, label }: { iconName: string; label: string }) => (
+  <View className="flex-row items-center mr-4">
+    <Ionicons name={iconName as any} size={24} color="green" />
+    <Text className="text-xs text-gray-600 ml-1">{label}</Text>
+  </View>
+);
+
+const HomeScreen = () => {
+  const navigation = useNavigation();
+
   return (
-    <ScreenWrapper title="Mis Plantas">
-      <View className="flex-1">
-        <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
-          <View style={styles.card}>
+    <ScreenWrapper title="Plantas Supervisadas">
+      <FlatList
+        data={plantsData}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={{ paddingBottom: 20 }}
+        renderItem={({ item }) => (
+          <TouchableOpacity
+            onPress={() => navigation.navigate('PlantInfo' as never)}
+            className="flex-row bg-white rounded-xl p-4 mb-5 shadow-md"
+          >
             <Image
-              source={{ uri: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6' }}
-              style={styles.plantImage}
+              source={item.image}
+              style={{ width: 70, height: 70, borderRadius: 35 }}
               resizeMode="cover"
             />
-            <View style={styles.info}>
-              <Text style={styles.label}>Temperatura:</Text>
-              <Text style={styles.value}>24 °C</Text>
-              <Text style={styles.label}>Humedad:</Text>
-              <Text style={styles.value}>58 %</Text>
+            <View className="flex-1 ml-4 justify-center">
+              <Text className="text-lg font-semibold text-green-800">{item.name}</Text>
+              <Text className="text-sm text-gray-600 mb-2 italic">{item.species}</Text>
+              <View className="flex-row">
+                <StatItem iconName="thermometer-outline" label={item.temp} />
+                <StatItem iconName="water-outline" label={`${item.humidity} Humedad`} />
+                <StatItem iconName="leaf-outline" label={`Suelo: ${item.moisture}`} />
+              </View>
             </View>
-          </View>
-
-          <Text style={styles.chartTitle}>Temperatura – Últimas 7 h</Text>
-          <LineChart
-            data={{
-              labels: ['1h', '2h', '3h', '4h', '5h', '6h', '7h'],
-              datasets: [{ data: temperatureData }],
-            }}
-            width={screenWidth - 32}
-            height={200}
-            yAxisSuffix="°C"
-            chartConfig={chartConfig('#4caf50')}
-            bezier
-            style={styles.chart}
-          />
-
-          <Text style={styles.chartTitle}>Humedad – Últimas 7 h</Text>
-          <LineChart
-            data={{
-              labels: ['1h', '2h', '3h', '4h', '5h', '6h', '7h'],
-              datasets: [{ data: humidityData }],
-            }}
-            width={screenWidth - 32}
-            height={200}
-            yAxisSuffix="%"
-            chartConfig={chartConfig('#2196f3')}
-            bezier
-            style={styles.chart}
-          />
-        </ScrollView>
-      </View>
+          </TouchableOpacity>
+        )}
+      />
     </ScreenWrapper>
   );
-}
+};
 
-const chartConfig = (color: string) => ({
-  backgroundColor: '#ffffff',
-  backgroundGradientFrom: '#ffffff',
-  backgroundGradientTo: '#ffffff',
-  decimalPlaces: 0,
-  color: () => color,
-  labelColor: () => '#666',
-  propsForDots: {
-    r: '4',
-    strokeWidth: '2',
-    stroke: '#fff',
-  },
-});
-
-const styles = StyleSheet.create({
-  container: { paddingBottom: 32, paddingHorizontal: 16 },
-  card: {
-    backgroundColor: '#fff',
-    borderRadius: 16,
-    padding: 16,
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: 8,
-    marginBottom: 20,
-    elevation: 3,
-  },
-  plantImage: { width: 100, height: 100, borderRadius: 12 },
-  info: { marginLeft: 20 },
-  label: { fontSize: 16, color: '#555', marginTop: 4 },
-  value: { fontSize: 20, fontWeight: '600', color: '#333' },
-  chartTitle: { fontSize: 18, fontWeight: '600', color: '#444', marginTop: 16, marginBottom: 8 },
-  chart: { borderRadius: 12, marginBottom: 16 },
-});
+export default HomeScreen;

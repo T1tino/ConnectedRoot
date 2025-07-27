@@ -13,14 +13,13 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator 
-        id={undefined}
-        initialRouteName="Welcome" 
+        initialRouteName="Welcome"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
-        <Stack.Screen name="login" component={LoginScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="SignUp" component={SignUpScreen} />
-        <Stack.Screen name="BottomTabs" component={BottomTabNavigator} /> {/* Aquí va el Tab Navigator */}
+        <Stack.Screen name="BottomTabs" component={BottomTabNavigator} />
       </Stack.Navigator>
     </NavigationContainer>
   );

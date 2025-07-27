@@ -1,3 +1,5 @@
+// src/navigation/BottomTabNavigator.tsx
+
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View, Text, Pressable } from 'react-native';
@@ -13,7 +15,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import HomeScreen from '../screens/HomeScreen';
 import ExploreScreen from '../screens/ExploreScreen';
 import FavoritesScreen from '../screens/FavoritesScreen';
-import PlantsListScreen from '../screens/PlantsListScreen';
+import PlantInfoScreen from '../screens/PlantInfoScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
@@ -27,6 +29,9 @@ const CustomTabBar = ({ state, descriptors, navigation }) => {
       style={{ paddingBottom: insets.bottom, paddingTop: 10 }}
     >
       {state.routes.map((route, index) => {
+        // Excluir tab visible de PlantInfo
+        if (route.name === 'PlantInfo') return null;
+
         const isFocused = state.index === index;
         const onPress = () => {
           const event = navigation.emit({
@@ -69,8 +74,18 @@ export default function BottomTabNavigator() {
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Explore" component={ExploreScreen} />
       <Tab.Screen name="Favorites" component={FavoritesScreen} />
-      <Tab.Screen name="Plants" component={PlantsListScreen} />
+      
       <Tab.Screen name="Profile" component={ProfileScreen} />
+
+      {/* PlantInfo: disponible pero no visible en los tabs */}
+      <Tab.Screen
+        name="PlantInfo"
+        component={PlantInfoScreen}
+        options={{
+          tabBarButton: () => null, // oculta el botón del tab
+          tabBarStyle: { display: 'none' }, // oculta la barra si estás dentro
+        }}
+      />
     </Tab.Navigator>
   );
 }
