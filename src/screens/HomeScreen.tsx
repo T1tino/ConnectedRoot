@@ -24,7 +24,7 @@ const plantsData = [
     humidity: 'Low',
     moisture: 'Low',
   },
-  // Más plantas aquí
+  // Puedes agregar más plantas aquí...
 ];
 
 interface StatItemProps {
@@ -34,10 +34,8 @@ interface StatItemProps {
 
 const StatItem: React.FC<StatItemProps> = ({ iconName, label }) => (
   <View className="flex-row items-center mr-4">
-    <Ionicons name={iconName as any} size={24} color="green" />
-    <Text className="text-xs text-gray-600 ml-1">
-      {label}
-    </Text>
+    <Ionicons name={iconName as any} size={20} color="green" />
+    <Text className="text-xs text-gray-600 ml-1">{label}</Text>
   </View>
 );
 
@@ -59,12 +57,8 @@ const HomeScreen: React.FC = () => {
         resizeMode="cover"
       />
       <View className="flex-1 ml-4 justify-center">
-        <Text className="text-lg font-semibold text-green-800">
-          {item.name}
-        </Text>
-        <Text className="text-sm text-gray-600 mb-2 italic">
-          {item.species}
-        </Text>
+        <Text className="text-lg font-semibold text-green-800">{item.name}</Text>
+        <Text className="text-sm text-gray-600 mb-2 italic">{item.species}</Text>
         <View className="flex-row">
           <StatItem iconName="thermometer-outline" label={item.temp} />
           <StatItem iconName="water-outline" label={`${item.humidity} Humedad`} />
