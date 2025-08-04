@@ -1,31 +1,21 @@
 // src/screens/HomeScreen.tsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { TouchableOpacity, View, Text, FlatList, Image } from 'react-native';
+import { TouchableOpacity, View, Text, FlatList, Image, ActivityIndicator } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import ScreenWrapper from '../components/ScreenWrapper';
+import axios from 'axios';
 
-const plantsData = [
-  {
-    id: '1',
-    name: 'Ficus Audrey',
-    species: 'Ficus benghalensis',
-    image: require('../assets/images/categoriesPlants/largePlants/LargeFicusAudrey/ficus-audrey_burbank-white_gallery_all_all_01.webp'),
-    temp: '18-25°C',
-    humidity: '60%',
-    moisture: 'Medium',
-  },
-  {
-    id: '2',
-    name: 'Snake Plant',
-    species: 'Sansevieria trifasciata',
-    image: require('../assets/images/categoriesPlants/largePlants/LargeFicusAudrey/ficus-audrey-burbank-almond_arrowhead-dracaena-marginata-pentagonal-planter_gallery_all_all_01.webp'),
-    temp: '15-27°C',
-    humidity: 'Low',
-    moisture: 'Low',
-  },
-  // Puedes agregar más plantas aquí...
-];
+interface Plant {
+  _id: string;
+  nombreComun: string;
+  nombreCientifico?: string;
+  temperatura?: { min: number; max: number };
+  humedad?: string;
+  iluminacion?: string;
+  cuidadosExtra?: string;
+  image?: string; // URL
+}
 
 interface StatItemProps {
   iconName: string;
@@ -42,37 +32,66 @@ const StatItem: React.FC<StatItemProps> = ({ iconName, label }) => (
 const HomeScreen: React.FC = () => {
   const navigation = useNavigation();
 
-  const handlePlantPress = () => {
-    navigation.navigate('PlantInfo' as never);
+  const [plantsData, setPlantsData] = useState<Plant[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    axios.get('http://localhost:4000/api/plants')
+      .then(res => {
+        setPlantsData(res.data);
+        setLoading(false);
+      })
+      .catch(() => {
+        setError('Error al cargar plantas');
+        setLoading(false);
+      });
+  }, []);
+
+  const handlePlantPress = (plantId: string) => {
+    navigation.navigate('PlantInfo' as never, { id: plantId } as never);
   };
 
-  const renderPlantItem = ({ item }: { item: typeof plantsData[0] }) => (
+  const renderPlantItem = ({ item }: { item: Plant }) => (
     <TouchableOpacity
-      onPress={handlePlantPress}
+      onPress={() => handlePlantPress(item._id)}
       className="flex-row bg-white rounded-xl p-4 mb-5 shadow-md"
     >
-      <Image
-        source={item.image}
-        style={{ width: 70, height: 70, borderRadius: 35 }}
-        resizeMode="cover"
-      />
+      {item.image ? (
+        <Image
+          source={{ uri: item.image }}
+          style={{ width: 70, height: 70, borderRadius: 35 }}
+          resizeMode="cover"
+        />
+      ) : (
+        <View style={{ width: 70, height: 70, borderRadius: 35, backgroundColor: '#ddd' }} />
+      )}
+
       <View className="flex-1 ml-4 justify-center">
-        <Text className="text-lg font-semibold text-green-800">{item.name}</Text>
-        <Text className="text-sm text-gray-600 mb-2 italic">{item.species}</Text>
-        <View className="flex-row">
-          <StatItem iconName="thermometer-outline" label={item.temp} />
-          <StatItem iconName="water-outline" label={`${item.humidity} Humedad`} />
-          <StatItem iconName="leaf-outline" label={`Suelo: ${item.moisture}`} />
+        <Text className="text-lg font-semibold text-green-800">{item.nombreComun}</Text>
+        <Text className="text-sm text-gray-600 mb-2 italic">{item.nombreCientifico}</Text>
+        <View className="flex-row flex-wrap">
+          {item.temperatura && (
+            <StatItem
+              iconName="thermometer-outline"
+              label={`${item.temperatura.min}°C - ${item.temperatura.max}°C`}
+            />
+          )}
+          {item.humedad && <StatItem iconName="water-outline" label={`${item.humedad} Humedad`} />}
+          {item.cuidadosExtra && <StatItem iconName="leaf-outline" label={`Cuidados: ${item.cuidadosExtra}`} />}
         </View>
       </View>
     </TouchableOpacity>
   );
 
+  if (loading) return <ActivityIndicator size="large" style={{ flex: 1, justifyContent: 'center' }} />;
+  if (error) return <Text style={{ color: 'red', textAlign: 'center', marginTop: 20 }}>{error}</Text>;
+
   return (
     <ScreenWrapper title="Plantas Supervisadas">
       <FlatList
         data={plantsData}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item._id}
         contentContainerStyle={{ paddingBottom: 20 }}
         renderItem={renderPlantItem}
       />
