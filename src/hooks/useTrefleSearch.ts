@@ -1,33 +1,31 @@
-import { useEffect, useState } from 'react';
+// useTrefleSearch.ts
+import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { TREFLE_API_KEY, TREFLE_API_URL } from '../constants/trefle';
-import * as FileSystem from 'expo-file-system';
-import offlineData from '../../src/data/offlinePlants.json';
+import { TREFLE_API_KEY } from '../constants/trefle';
 
-export function useTrefleSearch(query: string) {
-  const [plants, setPlants] = useState<any[]>([]);
+const API_URL = 'https://trefle.io/api/v1/species/search';
+
+export const useTrefleSearch = (query: string) => {
+  const [plants, setPlants] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const fetchPlants = async () => {
-      if (!query) {
-        // Modo "explorar sin búsqueda": muestra offline
-        setPlants(offlineData);
-        return;
-      }
+    if (!query) return;
 
+    const fetchPlants = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(TREFLE_API_URL, {
+        const response = await axios.get(API_URL, {
           params: {
             token: TREFLE_API_KEY,
             q: query,
           },
         });
-        setPlants(response.data.data);
+
+        setPlants(response.data.data || []);
       } catch (error) {
-        console.warn('❌ Error fetching from API, usando datos offline.', error);
-        setPlants(offlineData); // fallback
+        console.error('Error fetching plants:', error);
+        setPlants([]);
       } finally {
         setLoading(false);
       }
@@ -37,4 +35,4 @@ export function useTrefleSearch(query: string) {
   }, [query]);
 
   return { plants, loading };
-}
+};
