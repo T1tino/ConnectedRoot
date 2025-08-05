@@ -2,6 +2,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const plantsDashboardRoutes = require('./routes/plantsDashboard');
 require('dotenv').config();
 
 const app = express();
@@ -12,11 +13,12 @@ const PORT = process.env.PORT || 4000;
 // ==============================================
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
+app.use('/api/plantas/dashboard', plantsDashboardRoutes);
 
 // Configuración CORS específica para React Native
 app.use(cors({
   origin: [
-    'http://localhost:3000',
+    'http://localhost:4000',
     'http://localhost:19006', // Expo web
     'http://localhost:8081',  // Metro bundler
     'exp://localhost:19000',  // Expo client

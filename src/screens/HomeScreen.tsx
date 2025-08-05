@@ -48,9 +48,10 @@ const HomeScreen: React.FC = () => {
       });
   }, []);
 
-  const handlePlantPress = (plantId: string) => {
-    navigation.navigate('PlantInfo' as never, { id: plantId } as never);
-  };
+const handlePlantPress = (plantId: string) => {
+  navigation.navigate('PlantInfoScreen', { id: plantId });
+};
+
 
   const renderPlantItem = ({ item }: { item: Plant }) => (
     <TouchableOpacity

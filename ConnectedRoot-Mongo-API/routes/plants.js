@@ -1,11 +1,12 @@
+// ConnectedRoot-Mongo-API/routes/plants.js
 const express = require('express');
 const router = express.Router();
-const Plant = require('../models/Plant');
+const Plants = require('../models/Plant');
 
 // GET /api/plants
 router.get('/', async (req, res) => {
     try {
-        const plants = await Plant.find();
+        const plants = await Plants.find();
         res.json(plants);
     } catch (err) {
         res.status(500).json({ error: 'Error al obtener plantas' });
@@ -15,7 +16,7 @@ router.get('/', async (req, res) => {
 // POST /api/plants
 router.post('/', async (req, res) => {
     try {
-        const plant = new Plant(req.body);
+        const plant = new Plants(req.body);
         await plant.save();
         res.status(201).json(plant);
     } catch (err) {
