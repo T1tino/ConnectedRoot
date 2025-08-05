@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import ScreenWrapper from '../components/ScreenWrapper';
-import { useTrefleSearch } from '../hooks/useTrefleSearch';
+// import { useTrefleSearch } from '../hooks/useTrefleSearch';
 
 export default function ExploreScreen() {
   const navigation = useNavigation();

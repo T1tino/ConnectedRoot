@@ -1,8 +1,25 @@
 // src/services/api.ts
 import axios from 'axios';
 
-// Configura tu URL base del backend
-const API_BASE_URL = 'http://localhost:3000/api'; // Cambia por tu URL de producción
+// 🚨 PROBLEMA SOLUCIONADO: No usar localhost en dispositivos móviles
+// Opción 1: Configuración automática por entorno
+const getApiBaseUrl = () => {
+  if (__DEV__) {
+    // 🔄 CAMBIA ESTA IP POR LA IP DE TU COMPUTADORA LOCAL
+    // Para encontrar tu IP: Windows = ipconfig, Mac/Linux = ifconfig
+    return 'http://192.168.0.11:3000/api'; // ⚠️ REEMPLAZA 192.168.1.100 con tu IP real
+  } else {
+    // En producción usarías tu servidor real
+    return 'https://tu-servidor-produccion.com/api';
+  }
+};
+
+// Opción 2: Configuración manual (descomenta para usar)
+// const API_BASE_URL = 'http://TU_IP_LOCAL:3000/api'; // Ejemplo: http://192.168.1.105:3000/api
+
+const API_BASE_URL = getApiBaseUrl();
+
+console.log('🌐 API Base URL:', API_BASE_URL); // Para debugging
 
 // Crear instancia de axios
 const api = axios.create({
@@ -13,11 +30,29 @@ const api = axios.create({
   },
 });
 
-// Interceptor para manejo de errores
+// Interceptor para manejo de errores mejorado
 api.interceptors.response.use(
   (response) => response,
   (error) => {
+    if (error.code === 'NETWORK_ERROR' || error.message === 'Network Error') {
+      console.error('❌ Error de Red - Verifica:');
+      console.error('1. ¿Tu servidor está corriendo?');
+      console.error('2. ¿Usas IP local en lugar de localhost?');
+      console.error('3. ¿Mismo WiFi en teléfono y computadora?');
+      console.error('4. URL actual:', API_BASE_URL);
+    }
     console.error('API Error:', error.response?.data || error.message);
+    return Promise.reject(error);
+  }
+);
+
+// Interceptor para debugging de requests
+api.interceptors.request.use(
+  (config) => {
+    console.log(`🚀 API Request: ${config.method?.toUpperCase()} ${config.url}`);
+    return config;
+  },
+  (error) => {
     return Promise.reject(error);
   }
 );
@@ -190,6 +225,17 @@ export const apiService = {
     } catch (error) {
       console.error('Error fetching plant statistics:', error);
       throw error;
+    }
+  },
+
+  // Método para probar la conexión
+  async testConnection(): Promise<boolean> {
+    try {
+      await api.get('/health'); // Asume que tienes un endpoint de health check
+      return true;
+    } catch (error) {
+      console.error('Connection test failed:', error);
+      return false;
     }
   },
 };

@@ -1,89 +1,54 @@
-// hooks/usePlants.ts - Hook adicional para manejar el catálogo de plantas
-import { useState, useEffect } from 'react';
-import { Plant } from '../../types/database';
+// src/hooks/usePlantasSupervisadas.ts
+import { useState, useCallback } from 'react';
+import { PlantaSupervisadaWithDetails } from '../../types/database';
 import { database } from '../../types/database';
 
-export const usePlants = () => {
-  const [plants, setPlants] = useState<Plant[]>([]);
-  const [loading, setLoading] = useState(true);
+interface UsePlantasSupervisadasReturn {
+  plantasSupervisadasWithDetails: PlantaSupervisadaWithDetails[];
+  loading: boolean;
+  error: string | null;
+  fetchWithDetails: () => Promise<void>;
+  refreshData: () => Promise<void>;
+}
+
+export const usePlantasSupervisadas = (): UsePlantasSupervisadasReturn => {
+  const [plantasSupervisadasWithDetails, setPlantasSupervisadasWithDetails] = useState<PlantaSupervisadaWithDetails[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchPlants = async (forceRefresh = false) => {
+  const fetchWithDetails = useCallback(async (): Promise<void> => {
+    setLoading(true);
+    setError(null);
+    
     try {
-      setLoading(true);
-      setError(null);
-      const data = await database.getPlants(forceRefresh);
-      setPlants(data);
+      // Usa el método que ya tienes en tu DatabaseManager
+      const data = await database.getPlantasSupervisadasWithDetails();
+      setPlantasSupervisadasWithDetails(data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Error cargando plantas');
+      const errorMessage = err instanceof Error ? err.message : 'Error cargando plantas supervisadas';
+      setError(errorMessage);
+      console.error('Error fetching plantas supervisadas:', err);
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
-  const getPlant = async (id: string): Promise<Plant | null> => {
+  const refreshData = useCallback(async (): Promise<void> => {
+    // Fuerza un refresh de los datos
     try {
-      return await database.getPlant(id);
+      const data = await database.getPlantasSupervisadasWithDetails();
+      setPlantasSupervisadasWithDetails(data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Error obteniendo planta');
-      return null;
+      const errorMessage = err instanceof Error ? err.message : 'Error refrescando datos';
+      setError(errorMessage);
     }
-  };
-
-  const addPlant = async (plantData: Omit<Plant, '_id'>) => {
-    try {
-      const newPlant = await database.createPlant(plantData);
-      if (!newPlant) throw new Error('No se pudo crear la planta');
-      
-      setPlants(prev => [...prev, newPlant]);
-      return newPlant;
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Error creando planta');
-      throw err;
-    }
-  };
-
-  const updatePlant = async (id: string, updates: Partial<Plant>) => {
-    try {
-      const updatedPlant = await database.updatePlant(id, updates);
-      if (!updatedPlant) throw new Error('No se pudo actualizar la planta');
-      
-      setPlants(prev => 
-        prev.map(plant => plant._id === id ? updatedPlant : plant)
-      );
-      
-      return updatedPlant;
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Error actualizando planta');
-      throw err;
-    }
-  };
-
-  const deletePlant = async (id: string) => {
-    try {
-      const success = await database.deletePlant(id);
-      if (success) {
-        setPlants(prev => prev.filter(plant => plant._id !== id));
-      }
-      return success;
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Error eliminando planta');
-      throw err;
-    }
-  };
-
-  useEffect(() => {
-    fetchPlants();
   }, []);
 
   return {
-    plants,
+    plantasSupervisadasWithDetails,
     loading,
     error,
-    refetch: fetchPlants,
-    getPlant,
-    addPlant,
-    updatePlant,
-    deletePlant,
+    fetchWithDetails,
+    refreshData,
   };
 };

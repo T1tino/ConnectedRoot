@@ -1,0 +1,3892 @@
+errores:
+[{
+	"resource": "/home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/App.tsx",
+	"owner": "typescript",
+	"code": "2741",
+	"severity": 8,
+	"message": "Property 'id' is missing in type '{ children: Element[]; screenOptions: { headerShown: false; }; }' but required in type '{ id: undefined; }'.",
+	"source": "ts",
+	"startLineNumber": 17,
+	"startColumn": 10,
+	"endLineNumber": 17,
+	"endColumn": 25,
+	"relatedInformation": [
+		{
+			"startLineNumber": 59,
+			"startColumn": 5,
+			"endLineNumber": 59,
+			"endColumn": 7,
+			"message": "'id' is declared here.",
+			"resource": "/home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/node_modules/@react-navigation/core/lib/typescript/src/types.d.ts"
+		}
+	],
+	"origin": "extHost1"
+},{
+	"resource": "/home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/components/SupervisedPlants.tsx",
+	"owner": "typescript",
+	"code": "2339",
+	"severity": 8,
+	"message": "Property 'plantasSupervisadas' does not exist on type 'UsePlantasSupervisadasReturn'.",
+	"source": "ts",
+	"startLineNumber": 9,
+	"startColumn": 5,
+	"endLineNumber": 9,
+	"endColumn": 24,
+	"origin": "extHost1"
+},{
+	"resource": "/home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/components/SupervisedPlants.tsx",
+	"owner": "typescript",
+	"code": "2339",
+	"severity": 8,
+	"message": "Property 'addPlantaSupervisada' does not exist on type 'UsePlantasSupervisadasReturn'.",
+	"source": "ts",
+	"startLineNumber": 12,
+	"startColumn": 5,
+	"endLineNumber": 12,
+	"endColumn": 25,
+	"origin": "extHost1"
+},{
+	"resource": "/home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/components/SupervisedPlants.tsx",
+	"owner": "typescript",
+	"code": "2339",
+	"severity": 8,
+	"message": "Property 'updatePlantaSupervisada' does not exist on type 'UsePlantasSupervisadasReturn'.",
+	"source": "ts",
+	"startLineNumber": 13,
+	"startColumn": 5,
+	"endLineNumber": 13,
+	"endColumn": 28,
+	"origin": "extHost1"
+},{
+	"resource": "/home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/components/SupervisedPlants.tsx",
+	"owner": "typescript",
+	"code": "2339",
+	"severity": 8,
+	"message": "Property 'deletePlantaSupervisada' does not exist on type 'UsePlantasSupervisadasReturn'.",
+	"source": "ts",
+	"startLineNumber": 14,
+	"startColumn": 5,
+	"endLineNumber": 14,
+	"endColumn": 28,
+	"origin": "extHost1"
+},{
+	"resource": "/home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/navigation/AppNavigator.tsx",
+	"owner": "typescript",
+	"code": "2741",
+	"severity": 8,
+	"message": "Property 'id' is missing in type '{ children: Element[]; initialRouteName: string; screenOptions: { headerShown: false; }; }' but required in type '{ id: undefined; }'.",
+	"source": "ts",
+	"startLineNumber": 16,
+	"startColumn": 8,
+	"endLineNumber": 16,
+	"endColumn": 23,
+	"relatedInformation": [
+		{
+			"startLineNumber": 59,
+			"startColumn": 5,
+			"endLineNumber": 59,
+			"endColumn": 7,
+			"message": "'id' is declared here.",
+			"resource": "/home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/node_modules/@react-navigation/core/lib/typescript/src/types.d.ts"
+		}
+	],
+	"origin": "extHost1"
+},{
+	"resource": "/home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/screens/ExploreScreen.tsx",
+	"owner": "typescript",
+	"code": "2304",
+	"severity": 8,
+	"message": "Cannot find name 'useTrefleSearch'.",
+	"source": "ts",
+	"startLineNumber": 19,
+	"startColumn": 31,
+	"endLineNumber": 19,
+	"endColumn": 46,
+	"origin": "extHost1"
+},{
+	"resource": "/home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/screens/ExploreScreen.tsx",
+	"owner": "typescript",
+	"code": "2345",
+	"severity": 8,
+	"message": "Argument of type '[\"PlantsCategoryItem\", { item: any; }]' is not assignable to parameter of type '[screen: \"Home\", params?: undefined, options?: { merge?: boolean; pop?: boolean; }] | [screen: \"PlantCatalog\", params?: undefined, options?: { merge?: boolean; pop?: boolean; }] | [screen: \"PlantInfoScreen\", params?: { id: string; }, options?: { merge?: boolean; pop?: boolean; }] | [screen: ...] | [screen: ...]'.\n  Type '[\"PlantsCategoryItem\", { item: any; }]' is not assignable to type '[screen: \"Settings\", params?: undefined, options?: { merge?: boolean; pop?: boolean; }]'.\n    Type at position 0 in source is not compatible with type at position 0 in target.\n      Type '\"PlantsCategoryItem\"' is not assignable to type '\"Settings\"'.",
+	"source": "ts",
+	"startLineNumber": 44,
+	"startColumn": 50,
+	"endLineNumber": 44,
+	"endColumn": 80,
+	"origin": "extHost1"
+},{
+	"resource": "/home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/utils/dataExport.ts",
+	"owner": "typescript",
+	"code": "2304",
+	"severity": 8,
+	"message": "Cannot find name 'API_BASE_URL'.",
+	"source": "ts",
+	"startLineNumber": 8,
+	"startColumn": 37,
+	"endLineNumber": 8,
+	"endColumn": 49,
+	"origin": "extHost1"
+}]
+
+
+
+codigo del proyecto:
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/hooks/usePlants.ts
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// hooks/usePlants.ts
+import { useState, useEffect } from 'react';
+import { Plant } from '../../types/database';
+import { mongoDBService } from '../services/mongodb';
+
+export const usePlants = () => {
+  const [plants, setPlants] = useState<Plant[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchPlants = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      const data = await mongoDBService.getAllPlants();
+      setPlants(data);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Error desconocido');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchPlants();
+  }, []);
+
+  return {
+    plants,
+    loading,
+    error,
+    refetch: fetchPlants,
+  };
+};
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/components/AlertsPanel.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// components/AlertsPanel.tsx
+import React, { useState, useEffect } from 'react';
+import { View, Text, FlatList, TouchableOpacity, RefreshControl } from 'react-native';
+import { notificationService } from '../services/notificationService';
+import { formatRelativeTime } from '../utils/dateUtils';
+
+export const AlertsPanel: React.FC = () => {
+  const [alerts, setAlerts] = useState<any[]>([]);
+  const [refreshing, setRefreshing] = useState(false);
+
+  const loadAlerts = async () => {
+    const alertsList = await notificationService.getAlerts();
+    setAlerts(alertsList);
+  };
+
+  const handleAcknowledge = async (alertId: string) => {
+    await notificationService.acknowledgeAlert(alertId);
+    loadAlerts();
+  };
+
+  const onRefresh = async () => {
+    setRefreshing(true);
+    await loadAlerts();
+    setRefreshing(false);
+  };
+
+  useEffect(() => {
+    loadAlerts();
+  }, []);
+
+  const getAlertColor = (type: string) => {
+    switch (type) {
+      case 'humidity_low': return 'border-red-500 bg-red-50';
+      case 'humidity_high': return 'border-blue-500 bg-blue-50';
+      case 'temperature_high': return 'border-orange-500 bg-orange-50';
+      case 'temperature_low': return 'border-purple-500 bg-purple-50';
+      default: return 'border-gray-500 bg-gray-50';
+    }
+  };
+
+  const getAlertIcon = (type: string) => {
+    switch (type) {
+      case 'humidity_low': return '💧';
+      case 'humidity_high': return '🌊';
+      case 'temperature_high': return '🔥';
+      case 'temperature_low': return '❄️';
+      default: return '⚠️';
+    }
+  };
+
+  const renderAlert = ({ item }: { item: any }) => (
+    <View className={`border-l-4 p-4 mb-3 rounded-r-lg ${getAlertColor(item.type)} ${item.acknowledged ? 'opacity-50' : ''}`}>
+      <View className="flex-row justify-between items-start">
+        <View className="flex-1">
+          <Text className="font-semibold text-gray-800">
+            {getAlertIcon(item.type)} {item.message}
+          </Text>
+          <Text className="text-xs text-gray-600 mt-1">
+            {formatRelativeTime(item.timestamp)}
+          </Text>
+        </View>
+        {!item.acknowledged && (
+          <TouchableOpacity
+            onPress={() => handleAcknowledge(item.id)}
+            className="bg-green-500 px-3 py-1 rounded"
+          >
+            <Text className="text-white text-xs">Visto</Text>
+          </TouchableOpacity>
+        )}
+      </View>
+    </View>
+  );
+
+  const unacknowledgedCount = alerts.filter(alert => !alert.acknowledged).length;
+
+  return (
+    <View className="flex-1 bg-gray-50">
+      <View className="p-4 bg-white border-b border-gray-200">
+        <Text className="text-xl font-bold text-gray-800">
+          🚨 Alertas {unacknowledgedCount > 0 && `(${unacknowledgedCount})`}
+        </Text>
+      </View>
+
+      <FlatList
+        data={alerts}
+        renderItem={renderAlert}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={{ padding: 16 }}
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        }
+        ListEmptyComponent={
+          <View className="flex-1 justify-center items-center py-12">
+            <Text className="text-6xl mb-4">🌱</Text>
+            <Text className="text-lg text-gray-600">¡Todo en orden!</Text>
+            <Text className="text-sm text-gray-500">No hay alertas pendientes</Text>
+          </View>
+        }
+      />
+    </View>
+  );
+};
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/components/home/ProductList.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+import React from 'react';
+import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
+
+const products = [
+  {
+    id: '1',
+    title: 'Money Tree Plant',
+    label: 'Best Seller',
+    price: '$64 - 66',
+    image: require('../../assets/images/categoriesPlants/BestForBeginners/MoneyTreePlant/money-tree_small_bryant-cream.webp'),
+  },
+  {
+    id: '2',
+    title: 'Rhipsalis',
+    label: 'New Arrival',
+    price: '$52',
+    image: require('../../assets/images/categoriesPlants/BestForBeginners/Rhipsalis/rhipsalis_small_upcycled_cream.webp'),
+  },
+];
+
+const ProductCard = ({ title, label, price, image }) => (
+  <TouchableOpacity className="mr-4 w-36 bg-white rounded-xl overflow-hidden shadow">
+    <Image source={image} className="w-full h-32" resizeMode="cover" />
+    <View className="px-2 py-2">
+      <Text className="text-xs text-gray-500 mb-1">{label}</Text>
+      <Text className="text-sm font-medium text-gray-800" numberOfLines={1}>{title}</Text>
+      <View className="flex-row justify-between items-center mt-1">
+        <Text className="text-xs text-gray-700">{price}</Text>
+        <Text className="text-xs underline text-gray-600">Show More</Text>
+      </View>
+    </View>
+  </TouchableOpacity>
+);
+
+const ProductList = () => {
+  return (
+    <View className="mt-6 mb-10">
+      <Text className="text-xl font-semibold text-gray-800 mb-3">Best Plants</Text>
+      <FlatList
+        data={products}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => <ProductCard {...item} />}
+        contentContainerStyle={{ paddingHorizontal: 16 }}
+      />
+    </View>
+  );
+};
+
+export default ProductList;
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/components/home/CategoryList.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+import React from 'react';
+import { View, Text, FlatList, Image } from 'react-native';
+
+const categories = [
+  { id: '1', name: 'Plants', icon: require('../../assets/icons/plants.png') },
+  { id: '2', name: 'Planters', icon: require('../../assets/icons/pots.png') },
+  { id: '3', name: 'Plant Care', icon: require('../../assets/icons/fertilizers.png') },
+  { id: '4', name: 'Decor', icon: require('../../assets/icons/flowers.png') },
+];
+
+const CategoryCard = ({ name, icon }) => (
+  <View className="items-center mr-4 w-20">
+    <View className="bg-green-100 rounded-xl w-16 h-16 justify-center items-center mb-1">
+      <Image source={icon} className="w-8 h-8" resizeMode="contain" />
+    </View>
+    <Text className="text-xs font-medium text-gray-800 text-center">{name}</Text>
+  </View>
+);
+
+const CategoryList = () => {
+  return (
+    <View className="mt-6">
+      <Text className="text-xl font-semibold text-gray-800 mb-3">Categories</Text>
+      <FlatList
+        data={categories}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => <CategoryCard {...item} />}
+        contentContainerStyle={{ paddingHorizontal: 16 }}
+      />
+    </View>
+  );
+};
+
+export default CategoryList;
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/components/home/SearchBar.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+
+import React from 'react';
+import { View, TextInput, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+
+const SearchBar = () => {
+  return (
+    <View className="w-full flex-row items-center justify-between">
+      <View className="flex-row items-center flex-1 bg-white rounded-xl px-4 py-2 shadow-sm">
+        <Ionicons name="search" size={20} color="#C5CCD6" className="mr-2" />
+        <TextInput
+          placeholder="Search"
+          placeholderTextColor="#C5CCD6"
+          className="flex-1 text-sm text-black"
+        />
+      </View>
+      <TouchableOpacity className="ml-4">
+        <Ionicons name="notifications-outline" size={24} color="#5A5A5A" />
+      </TouchableOpacity>
+    </View>
+  );
+};
+
+export default SearchBar;
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/components/CollectionsList.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/components/CollectionsList.tsx
+import React, { useState, useEffect } from 'react';
+import { View, Text, FlatList, TouchableOpacity, RefreshControl, Alert } from 'react-native';
+import { database, PlantaSupervisadaWithDetails } from '../../types/database';
+
+const CollectionsList = () => {
+  const [supervisedPlants, setSupervisedPlants] = useState<PlantaSupervisadaWithDetails[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
+
+  // Cargar plantas supervisadas al montar el componente
+  useEffect(() => {
+    loadSupervisedPlants();
+  }, []);
+
+  const loadSupervisedPlants = async () => {
+    setLoading(true);
+    try {
+      const data = await database.getPlantasSupervisadasWithDetails();
+      setSupervisedPlants(data);
+    } catch (error) {
+      Alert.alert('Error', 'No se pudieron cargar las plantas supervisadas');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleRefresh = async () => {
+    setRefreshing(true);
+    try {
+      const data = await database.getPlantasSupervisadasWithDetails();
+      setSupervisedPlants(data);
+    } catch (error) {
+      Alert.alert('Error', 'No se pudieron actualizar las plantas supervisadas');
+    } finally {
+      setRefreshing(false);
+    }
+  };
+
+  const handleCreateSupervisedPlant = () => {
+    // Aquí podrías navegar a una pantalla de creación de planta supervisada
+    // Por ahora solo mostramos un alert
+    Alert.alert(
+      'Crear Nueva Planta',
+      'Esta funcionalidad te llevará a la pantalla de selección de plantas para supervisar.',
+      [
+        { text: 'Cancelar', style: 'cancel' },
+        { text: 'Ir', onPress: () => {
+          // Navegación a pantalla de plantas disponibles
+          console.log('Navegar a selección de plantas');
+        }}
+      ]
+    );
+  };
+
+  const handleDeleteSupervisedPlant = async (id: string, nombre: string) => {
+    Alert.alert(
+      'Confirmar eliminación',
+      `¿Estás seguro de que quieres dejar de supervisar "${nombre}"?`,
+      [
+        { text: 'Cancelar', style: 'cancel' },
+        {
+          text: 'Eliminar',
+          style: 'destructive',
+          onPress: async () => {
+            const success = await database.deletePlantaSupervisada(id);
+            if (success) {
+              setSupervisedPlants(prev => prev.filter(p => p._id !== id));
+              Alert.alert('Éxito', 'Planta eliminada de supervisión');
+            } else {
+              Alert.alert('Error', 'No se pudo eliminar la planta supervisada');
+            }
+          },
+        },
+      ]
+    );
+  };
+
+  const handleTogglePlantStatus = async (plant: PlantaSupervisadaWithDetails) => {
+    const newStatus = !plant.activa;
+    const success = await database.updatePlantaSupervisada(plant._id, { activa: newStatus });
+
+    if (success) {
+      setSupervisedPlants(prev =>
+        prev.map(p =>
+          p._id === plant._id ? { ...p, activa: newStatus } : p
+        )
+      );
+      Alert.alert(
+        'Estado actualizado',
+        `La planta ha sido ${newStatus ? 'activada' : 'desactivada'}`
+      );
+    } else {
+      Alert.alert('Error', 'No se pudo actualizar el estado de la planta');
+    }
+  };
+
+  const getStatusColor = (activa: boolean) => {
+    return activa ? 'bg-green-100' : 'bg-gray-100';
+  };
+
+  const getStatusTextColor = (activa: boolean) => {
+    return activa ? 'text-green-800' : 'text-gray-600';
+  };
+
+  const formatDate = (date: Date) => {
+    return new Date(date).toLocaleDateString('es-ES', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric'
+    });
+  };
+
+  const renderSupervisedPlant = ({ item }: { item: PlantaSupervisadaWithDetails }) => (
+    <View className={`rounded-lg shadow-sm p-4 mb-3 mx-4 ${getStatusColor(item.activa)}`}>
+      <View className="flex-row justify-between items-start mb-2">
+        <View className="flex-1">
+          <Text className="text-lg font-semibold text-gray-800">
+            {item.nombre || item.plantData?.nombreComun || 'Sin nombre'}
+          </Text>
+          {item.plantData && (
+            <Text className="text-sm text-gray-600 italic">
+              {item.plantData.nombreCientifico}
+            </Text>
+          )}
+        </View>
+        <View className="flex-row space-x-2">
+          <TouchableOpacity
+            onPress={() => handleTogglePlantStatus(item)}
+            className={`px-2 py-1 rounded ${item.activa ? 'bg-yellow-100' : 'bg-green-100'}`}
+          >
+            <Text className={`text-xs ${item.activa ? 'text-yellow-700' : 'text-green-700'}`}>
+              {item.activa ? 'Pausar' : 'Activar'}
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => handleDeleteSupervisedPlant(
+              item._id,
+              item.nombre || item.plantData?.nombreComun || 'Sin nombre'
+            )}
+            className="bg-red-100 px-2 py-1 rounded"
+          >
+            <Text className="text-red-600 text-xs">Eliminar</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+
+      {item.ubicacion && (
+        <Text className="text-gray-600 text-sm mb-2">
+          📍 {item.ubicacion}
+        </Text>
+      )}
+
+      {item.notas && (
+        <Text className="text-gray-600 text-sm mb-2">
+          💭 {item.notas}
+        </Text>
+      )}
+
+      <View className="flex-row justify-between items-center pt-2 border-t border-gray-200">
+        <View>
+          <Text className={`text-xs font-medium ${getStatusTextColor(item.activa)}`}>
+            Estado: {item.activa ? 'Activa' : 'Inactiva'}
+          </Text>
+          <Text className="text-xs text-gray-500">
+            Desde: {formatDate(item.fechaInicio)}
+          </Text>
+        </View>
+
+        {item.ultimaLectura && (
+          <View className="text-right">
+            <Text className="text-xs text-gray-500">Última lectura:</Text>
+            <Text className="text-xs text-gray-700">
+              {formatDate(item.ultimaLectura.timestamp)}
+            </Text>
+          </View>
+        )}
+      </View>
+
+      {item.ultimaLectura && (
+        <View className="mt-2 pt-2 border-t border-gray-200">
+          <Text className="text-xs text-gray-600 mb-1">Últimos valores:</Text>
+          <View className="flex-row justify-between">
+            <Text className="text-xs text-gray-700">
+              🌱 Suelo: {item.ultimaLectura.humedadSuelo}%
+            </Text>
+            <Text className="text-xs text-gray-700">
+              💧 Ambiente: {item.ultimaLectura.humedadAtmosferica}%
+            </Text>
+            <Text className="text-xs text-gray-700">
+              🌡️ {item.ultimaLectura.temperatura}°C
+            </Text>
+            <Text className="text-xs text-gray-700">
+              ☀️ {item.ultimaLectura.luz}
+            </Text>
+          </View>
+        </View>
+      )}
+    </View>
+  );
+
+  if (loading && supervisedPlants.length === 0) {
+    return (
+      <View className="flex-1 justify-center items-center">
+        <Text className="text-gray-600">Cargando plantas supervisadas...</Text>
+      </View>
+    );
+  }
+
+  return (
+    <View className="flex-1 bg-gray-50">
+      <View className="flex-row justify-between items-center p-4">
+        <Text className="text-2xl font-bold text-gray-800">
+          Mis Plantas Supervisadas
+        </Text>
+        <TouchableOpacity
+          onPress={handleCreateSupervisedPlant}
+          className="bg-green-500 px-4 py-2 rounded-lg"
+        >
+          <Text className="text-white font-medium">+ Nueva</Text>
+        </TouchableOpacity>
+      </View>
+
+      <FlatList
+        data={supervisedPlants}
+        renderItem={renderSupervisedPlant}
+        keyExtractor={(item) => item._id}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={handleRefresh}
+            colors={['#10B981']}
+          />
+        }
+        ListEmptyComponent={
+          <View className="flex-1 justify-center items-center py-20">
+            <Text className="text-gray-600 text-center mb-2">
+              No tienes plantas supervisadas
+            </Text>
+            <Text className="text-gray-500 text-center text-sm mb-4">
+              Comienza supervisando alguna planta de tu catálogo
+            </Text>
+            <TouchableOpacity
+              onPress={handleCreateSupervisedPlant}
+              className="bg-green-500 px-6 py-3 rounded-lg"
+            >
+              <Text className="text-white font-medium">Supervisar primera planta</Text>
+            </TouchableOpacity>
+          </View>
+        }
+      />
+    </View>
+  );
+};
+
+export default CollectionsList;
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/components/PlantDetailModal.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// components/PlantDetailModal.tsx
+import React, { useState } from 'react';
+import { Modal, View, Text, ScrollView, TouchableOpacity, TextInput } from 'react-native';
+import { Plant } from '../../types/database';
+import { usePlantasSupervisadas } from '../hooks/usePlantasSupervisadas';
+
+interface PlantDetailModalProps {
+  plant: Plant | null;
+  visible: boolean;
+  onClose: () => void;
+}
+
+export const PlantDetailModal: React.FC<PlantDetailModalProps> = ({ plant, visible, onClose }) => {
+  const { addPlantaSupervisada } = usePlantasSupervisadas();
+  const [showAddForm, setShowAddForm] = useState(false);
+  const [formData, setFormData] = useState({
+    nombre: '',
+    ubicacion: '',
+    notas: ''
+  });
+
+  const handleAddToSupervised = async () => {
+    if (!plant) return;
+
+    try {
+      await addPlantaSupervisada({
+        plantId: plant._id,
+        nombre: formData.nombre || plant.nombreComun,
+        ubicacion: formData.ubicacion,
+        notas: formData.notas,
+        fechaInicio: new Date(),
+        activa: true,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      });
+
+      setShowAddForm(false);
+      setFormData({ nombre: '', ubicacion: '', notas: '' });
+      onClose();
+    } catch (error) {
+      console.error('Error adding supervised plant:', error);
+    }
+  };
+
+  if (!plant) return null;
+
+  return (
+    <Modal visible={visible} animationType="slide" presentationStyle="pageSheet">
+      <View className="flex-1 bg-white">
+        {/* Header */}
+        <View className="flex-row justify-between items-center p-4 border-b border-gray-200">
+          <Text className="text-xl font-bold text-green-800">Detalles de Planta</Text>
+          <TouchableOpacity onPress={onClose} className="p-2">
+            <Text className="text-lg text-gray-600">✕</Text>
+          </TouchableOpacity>
+        </View>
+
+        <ScrollView className="flex-1">
+          {/* Información básica */}
+          <View className="p-4">
+            <Text className="text-2xl font-bold text-green-800 mb-2">{plant.nombreComun}</Text>
+            <Text className="text-lg italic text-gray-600 mb-4">{plant.nombreCientifico}</Text>
+
+            <Text className="text-base text-gray-700 mb-4">{plant.descripcion}</Text>
+
+            {/* Cuidados */}
+            <View className="bg-green-50 rounded-lg p-4 mb-4">
+              <Text className="text-lg font-bold text-green-800 mb-3">🌱 Cuidados Requeridos</Text>
+              <View className="space-y-2">
+                <View className="flex-row items-center">
+                  <Text className="text-base">💧 Humedad del suelo: </Text>
+                  <Text className="font-semibold">{plant.humedadSuelo}%</Text>
+                </View>
+                <View className="flex-row items-center">
+                  <Text className="text-base">🌫️ Humedad atmosférica: </Text>
+                  <Text className="font-semibold">{plant.humedadAtmosferica}%</Text>
+                </View>
+                <View className="flex-row items-center">
+                  <Text className="text-base">☀️ Requerimiento de luz: </Text>
+                  <Text className="font-semibold">{plant.luz}</Text>
+                </View>
+                <View className="flex-row items-center">
+                  <Text className="text-base">🌾 Tipo de cultivo: </Text>
+                  <Text className="font-semibold">{plant.tipoCultivo}</Text>
+                </View>
+              </View>
+            </View>
+
+            {/* Distribución */}
+            {plant.distribuciones && plant.distribuciones.length > 0 && (
+              <View className="bg-blue-50 rounded-lg p-4 mb-4">
+                <Text className="text-lg font-bold text-blue-800 mb-2">📍 Distribución</Text>
+                <Text className="text-base text-blue-700">{plant.distribuciones.join(', ')}</Text>
+              </View>
+            )}
+          </View>
+        </ScrollView>
+
+        {/* Botones de acción */}
+        <View className="p-4 border-t border-gray-200">
+          {!showAddForm ? (
+            <TouchableOpacity
+              onPress={() => setShowAddForm(true)}
+              className="bg-green-600 rounded-lg py-3 px-4"
+            >
+              <Text className="text-white text-center font-semibold">
+                🔧 Agregar a Plantas Supervisadas
+              </Text>
+            </TouchableOpacity>
+          ) : (
+            <View>
+              <Text className="text-lg font-bold mb-3">Configurar supervisión</Text>
+
+              <TextInput
+                placeholder={`Nombre (por defecto: ${plant.nombreComun})`}
+                value={formData.nombre}
+                onChangeText={(text) => setFormData(prev => ({ ...prev, nombre: text }))}
+                className="border border-gray-300 rounded-lg px-3 py-2 mb-3"
+              />
+
+              <TextInput
+                placeholder="Ubicación (ej: Balcón sur, Jardín trasero)"
+                value={formData.ubicacion}
+                onChangeText={(text) => setFormData(prev => ({ ...prev, ubicacion: text }))}
+                className="border border-gray-300 rounded-lg px-3 py-2 mb-3"
+              />
+
+              <TextInput
+                placeholder="Notas adicionales"
+                value={formData.notas}
+                onChangeText={(text) => setFormData(prev => ({ ...prev, notas: text }))}
+                className="border border-gray-300 rounded-lg px-3 py-2 mb-4"
+                multiline
+                numberOfLines={3}
+              />
+
+              <View className="flex-row space-x-2">
+                <TouchableOpacity
+                  onPress={() => setShowAddForm(false)}
+                  className="flex-1 bg-gray-500 rounded-lg py-2 px-4 mr-2"
+                >
+                  <Text className="text-white text-center">Cancelar</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={handleAddToSupervised}
+                  className="flex-1 bg-green-600 rounded-lg py-2 px-4"
+                >
+                  <Text className="text-white text-center">Confirmar</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          )}
+        </View>
+      </View>
+    </Modal>
+  );
+};
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/components/home/Slider.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+import React, { useRef, useState } from 'react';
+import { View, Text, Image, FlatList, Dimensions, TouchableOpacity } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
+const { width } = Dimensions.get('window');
+
+const slides = [
+  {
+    id: '1',
+    title: 'Plants make people happy!',
+    label: ' Plant tips',
+    image: require('../../assets/slide1.png'),
+  },
+  {
+    id: '2',
+    title: 'Take care of nature!',
+    label: ' Plant guide',
+    image: require('../../assets/slide2.png'),
+  },
+  {
+    id: '3',
+    title: 'Decorate with plants!',
+    label: ' Home decor',
+    image: require('../../assets/slide3.png'),
+  },
+];
+
+const Slider = () => {
+  const flatListRef = useRef<FlatList>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleScroll = (event: any) => {
+    const index = Math.round(event.nativeEvent.contentOffset.x / width);
+    setActiveIndex(index);
+  };
+
+  const goToSlide = (index: number) => {
+    flatListRef.current?.scrollToIndex({ index, animated: true });
+  };
+
+  return (
+    <View className="mt-2">
+      <FlatList
+        ref={flatListRef}
+        horizontal
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}
+        data={slides}
+        keyExtractor={(item) => item.id}
+        onMomentumScrollEnd={handleScroll}
+        renderItem={({ item }) => (
+          <View style={{ width: width * 0.92, marginHorizontal: width * 0.04 }}>
+            <LinearGradient
+              colors={['#CCF1BE', '#ffffff']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1.45, y: 0 }}
+              className="rounded-2xl flex-row items-center justify-between px-4 py-3 h-32"
+            >
+              <View className="flex-1 mr-4">
+                <View className="bg-white px-2 py-1 rounded-full self-start mb-2">
+                  <Text className="text-xs text-gray-700">
+                    {item.label}
+                  </Text>
+                </View>
+                <Text className="text-lg font-semibold text-gray-800 leading-tight">
+                  {item.title}
+                </Text>
+              </View>
+              <Image
+                source={item.image}
+                resizeMode="contain"
+                className="w-24 h-24"
+              />
+            </LinearGradient>
+          </View>
+        )}
+      />
+
+      {/* Indicadores de p\E1gina */}
+      <View className="flex-row justify-center mt-4 space-x-1">
+        {slides.map((_, index) => (
+          <TouchableOpacity
+            key={index}
+            onPress={() => goToSlide(index)}
+            className="mx-1"
+          >
+            <View
+              className={`rounded-full ${
+                activeIndex === index
+                  ? 'w-8 h-2 bg-green-500'
+                  : 'w-2 h-2 bg-green-200'
+              }`}
+            />
+          </TouchableOpacity>
+        ))}
+      </View>
+    </View>
+  );
+};
+
+export default Slider;
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/components/PlantsList.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// components/PlantsList.tsx
+import React from 'react';
+import { View, Text, FlatList, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { usePlants } from '../hooks/usePlants';
+import { Plant } from '../../types/database';
+
+export const PlantsList: React.FC = () => {
+  const { plants, loading, error, refetch } = usePlants();
+
+  const renderPlant = ({ item }: { item: Plant }) => (
+    <TouchableOpacity className="bg-white rounded-lg p-4 mb-3 shadow-sm">
+      <Text className="text-xl font-bold text-green-800">{item.nombreComun}</Text>
+      <Text className="text-sm italic text-gray-600">{item.nombreCientifico}</Text>
+      <View className="mt-2">
+        <Text className="text-sm">💧 Humedad suelo: {item.humedadSuelo}%</Text>
+        <Text className="text-sm">🌫️ Humedad atmosférica: {item.humedadAtmosferica}%</Text>
+        <Text className="text-sm">☀️ Luz: {item.luz}</Text>
+        <Text className="text-sm">🌱 Cultivo: {item.tipoCultivo}</Text>
+      </View>
+      <Text className="text-sm mt-2 text-gray-700" numberOfLines={2}>
+        {item.descripcion}
+      </Text>
+      {item.distribuciones && (
+        <Text className="text-xs text-blue-600 mt-1">
+          📍 {item.distribuciones.join(', ')}
+        </Text>
+      )}
+    </TouchableOpacity>
+  );
+
+  if (loading) {
+    return (
+      <View className="flex-1 justify-center items-center">
+        <ActivityIndicator size="large" color="#16a34a" />
+        <Text className="mt-2 text-gray-600">Cargando plantas...</Text>
+      </View>
+    );
+  }
+
+  if (error) {
+    return (
+      <View className="flex-1 justify-center items-center p-4">
+        <Text className="text-red-600 text-center mb-4">{error}</Text>
+        <TouchableOpacity
+          onPress={refetch}
+          className="bg-green-600 px-4 py-2 rounded-lg"
+        >
+          <Text className="text-white font-semibold">Reintentar</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+
+  return (
+    <View className="flex-1 bg-gray-50">
+      <FlatList
+        data={plants}
+        renderItem={renderPlant}
+        keyExtractor={(item) => item._id}
+        contentContainerStyle={{ padding: 16 }}
+        showsVerticalScrollIndicator={false}
+      />
+    </View>
+  );
+};
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/components/ReadingsChart.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// components/ReadingsChart.tsx
+import React from 'react';
+import { View, Text, ScrollView, Dimensions } from 'react-native';
+import { useLecturas } from '../hooks/useLecturas';
+import { Lectura } from '../../types/database';
+
+interface ReadingsChartProps {
+  plantaSupervisadaId: string;
+}
+
+export const ReadingsChart: React.FC<ReadingsChartProps> = ({ plantaSupervisadaId }) => {
+  const { lecturas, loading, error } = useLecturas(plantaSupervisadaId);
+  const screenWidth = Dimensions.get('window').width;
+
+  const getLastNReadings = (n: number) => {
+    return lecturas.slice(0, n).reverse();
+  };
+
+  const formatDate = (date: Date) => {
+    return new Date(date).toLocaleDateString('es-MX', {
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  };
+
+  const renderMetricCard = (title: string, value: number, unit: string, color: string, emoji: string) => (
+    <View className="bg-white rounded-lg p-4 m-2 shadow-sm" style={{ minWidth: screenWidth * 0.4 }}>
+      <Text className="text-lg font-bold" style={{ color }}>{emoji} {title}</Text>
+      <Text className="text-2xl font-bold text-gray-800">{value}{unit}</Text>
+    </View>
+  );
+
+  if (loading) {
+    return (
+      <View className="flex-1 justify-center items-center">
+        <Text className="text-gray-600">Cargando lecturas...</Text>
+      </View>
+    );
+  }
+
+  if (error) {
+    return (
+      <View className="flex-1 justify-center items-center p-4">
+        <Text className="text-red-600 text-center">{error}</Text>
+      </View>
+    );
+  }
+
+  const latestReading = lecturas[0];
+  const recentReadings = getLastNReadings(7);
+
+  return (
+    <ScrollView className="flex-1 bg-gray-50">
+      {/* Métricas actuales */}
+      <View className="p-4">
+        <Text className="text-xl font-bold text-gray-800 mb-4">📊 Última Lectura</Text>
+        {latestReading ? (
+          <>
+            <Text className="text-sm text-gray-600 mb-4">
+              {formatDate(latestReading.timestamp)}
+            </Text>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+              {renderMetricCard('Humedad Suelo', latestReading.humedadSuelo, '%', '#3b82f6', '💧')}
+              {renderMetricCard('Humedad Aire', latestReading.humedadAtmosferica, '%', '#06b6d4', '🌫️')}
+              {renderMetricCard('Temperatura', latestReading.temperatura, '°C', '#ef4444', '🌡️')}
+              {renderMetricCard('Luz', latestReading.luz, '%', '#f59e0b', '☀️')}
+            </ScrollView>
+          </>
+        ) : (
+          <Text className="text-gray-600">No hay lecturas disponibles</Text>
+        )}
+      </View>
+
+      {/* Historial reciente */}
+      <View className="p-4">
+        <Text className="text-xl font-bold text-gray-800 mb-4">📈 Historial (7 días)</Text>
+        {recentReadings.map((lectura, index) => (
+          <View key={lectura._id} className="bg-white rounded-lg p-4 mb-3 shadow-sm">
+            <View className="flex-row justify-between items-center mb-2">
+              <Text className="font-semibold text-gray-800">
+                Lectura #{recentReadings.length - index}
+              </Text>
+              <Text className="text-sm text-gray-600">
+                {formatDate(lectura.timestamp)}
+              </Text>
+            </View>
+            <View className="flex-row justify-between">
+              <Text className="text-sm">💧 {lectura.humedadSuelo}%</Text>
+              <Text className="text-sm">🌫️ {lectura.humedadAtmosferica}%</Text>
+              <Text className="text-sm">🌡️ {lectura.temperatura}°C</Text>
+              <Text className="text-sm">☀️ {lectura.luz}%</Text>
+            </View>
+          </View>
+        ))}
+      </View>
+    </ScrollView>
+  );
+};
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/components/ScreenWrapper.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/components/ScreenWrapper.tsx
+import React from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { View, Text, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
+import { Ionicons } from '@expo/vector-icons';
+
+type ScreenWrapperProps = {
+  title: string;
+  children: React.ReactNode;
+};
+
+export default function ScreenWrapper({ title, children }: ScreenWrapperProps) {
+  const navigation = useNavigation<DrawerNavigationProp<any>>();
+
+  return (
+    <SafeAreaView className="flex-1 bg-[#F2F2F2] px-4 pt-6">
+      <View className="flex-row items-center mb-6">
+        <TouchableOpacity onPress={() => navigation.openDrawer()} className="mr-4">
+          <Ionicons name="menu" size={28} color="#166534" />
+        </TouchableOpacity>
+        <Text className="text-3xl font-bold text-green-700">{title}</Text>
+      </View>
+
+      <View className="flex-1">{children}</View>
+    </SafeAreaView>
+  );
+}
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/constants/theme.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+import { Dimensions } from 'react-native';
+
+export const colors = {
+  accent: '#F3534A',
+  primary: '#0AC4BA',
+
+  secondary: '#2BDA8E',
+  tertiary: '#FFE358',
+  black: '#323643',
+  white: '#FFFFFF',
+  gray: '#9DA3B4',
+  gray2: '#C5CCD6',
+  blackPrimary: '#000000',
+  grayDefault: '#5A5A5A',
+  greenLight: '#CCF1BE',
+  greenCold: '#60BF96',
+  background: '#F2F2F2',
+};
+
+export const plantColors: any = {
+  cream: '#eee8df',
+  black: '#3d3d3d',
+  blush: '#fad9c2',
+  stone: '#eaebec',
+  terracotta: '#c49378',
+  mint: '#d6e3e2',
+  avocado: '#b8a76a',
+  blue: '#3c6b78',
+  stonewash: '#dddddd',
+  red: '#DE0606',
+};
+
+export const { width, height } = Dimensions.get('window');
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/screens/HomeScreen.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/screens/HomeScreen.tsx
+import React, { useEffect, useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
+import { TouchableOpacity, View, Text, FlatList, Image, ActivityIndicator, RefreshControl } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import ScreenWrapper from '../components/ScreenWrapper';
+import { usePlantasSupervisadas } from '../hooks/usePlantasSupervisadas';
+import { PlantaSupervisadaWithDetails } from '../../types/database';
+import { HomeScreenNavigationProp } from '../types/navigation';
+
+interface StatItemProps {
+  iconName: string;
+  label: string;
+  color?: string;
+}
+
+const StatItem: React.FC<StatItemProps> = ({ iconName, label, color = "green" }) => (
+  <View className="flex-row items-center mr-4">
+    <Ionicons name={iconName as any} size={20} color={color} />
+    <Text className="text-xs text-gray-600 ml-1">{label}</Text>
+  </View>
+);
+
+const HomeScreen: React.FC = () => {
+  const navigation = useNavigation<HomeScreenNavigationProp>();
+  const {
+    plantasSupervisadasWithDetails,
+    loading,
+    error,
+    fetchWithDetails
+  } = usePlantasSupervisadas();
+
+  const [refreshing, setRefreshing] = useState(false);
+
+  useEffect(() => {
+    // Cargar plantas supervisadas con detalles al montar el componente
+    fetchWithDetails();
+  }, [fetchWithDetails]);
+
+  const handleRefresh = async () => {
+    setRefreshing(true);
+    try {
+      await fetchWithDetails();
+    } finally {
+      setRefreshing(false);
+    }
+  };
+
+  const handlePlantPress = (plantId: string) => {
+    navigation.navigate('PlantInfoScreen', { id: plantId });
+  };
+
+  const getPlantStatus = (plant: PlantaSupervisadaWithDetails) => {
+    if (!plant.activa) return { color: '#gray', text: 'Inactiva' };
+
+    if (plant.ultimaLectura) {
+      const horasDesdeUltimaLectura = (Date.now() - new Date(plant.ultimaLectura.timestamp).getTime()) / (1000 * 60 * 60);
+
+      if (horasDesdeUltimaLectura < 2) return { color: '#10B981', text: 'Activa' };
+      if (horasDesdeUltimaLectura < 24) return { color: '#F59E0B', text: 'Datos antiguos' };
+      return { color: '#EF4444', text: 'Sin datos recientes' };
+    }
+
+    return { color: '#6B7280', text: 'Sin lecturas' };
+  };
+
+  const formatLastReading = (timestamp: Date) => {
+    const now = new Date();
+    const readingTime = new Date(timestamp);
+    const diffInMinutes = Math.floor((now.getTime() - readingTime.getTime()) / (1000 * 60));
+
+    if (diffInMinutes < 1) return 'Ahora';
+    if (diffInMinutes < 60) return `Hace ${diffInMinutes}m`;
+
+    const diffInHours = Math.floor(diffInMinutes / 60);
+    if (diffInHours < 24) return `Hace ${diffInHours}h`;
+
+    const diffInDays = Math.floor(diffInHours / 24);
+    return `Hace ${diffInDays}d`;
+  };
+
+  const renderPlantItem = ({ item }: { item: PlantaSupervisadaWithDetails }) => {
+    const status = getPlantStatus(item);
+    const plantName = item.nombre || item.plantData?.nombreComun || 'Sin nombre';
+    const scientificName = item.plantData?.nombreCientifico || '';
+
+    return (
+      <TouchableOpacity
+        onPress={() => handlePlantPress(item._id)}
+        className="flex-row bg-white rounded-xl p-4 mb-5 shadow-md"
+      >
+        {/* Imagen o placeholder */}
+        <View className="relative">
+          <View
+            style={{ width: 70, height: 70, borderRadius: 35 }}
+            className="bg-green-100 items-center justify-center"
+          >
+            <Ionicons name="leaf" size={30} color="#10B981" />
+          </View>
+
+          {/* Indicador de estado */}
+          <View
+            className="absolute -top-1 -right-1 w-4 h-4 rounded-full border-2 border-white"
+            style={{ backgroundColor: status.color }}
+          />
+        </View>
+
+        <View className="flex-1 ml-4 justify-center">
+          {/* Nombre de la planta */}
+          <View className="flex-row items-center justify-between mb-1">
+            <Text className="text-lg font-semibold text-green-800 flex-1">
+              {plantName}
+            </Text>
+            {item.ubicacion && (
+              <View className="flex-row items-center">
+                <Ionicons name="location-outline" size={14} color="#6B7280" />
+                <Text className="text-xs text-gray-500 ml-1">{item.ubicacion}</Text>
+              </View>
+            )}
+          </View>
+
+          {/* Nombre científico */}
+          {scientificName && (
+            <Text className="text-sm text-gray-600 mb-2 italic">{scientificName}</Text>
+          )}
+
+          {/* Estadísticas basadas en última lectura */}
+          <View className="flex-row flex-wrap">
+            {item.ultimaLectura ? (
+              <>
+                <StatItem
+                  iconName="thermometer-outline"
+                  label={`${item.ultimaLectura.temperatura}°C`}
+                />
+                <StatItem
+                  iconName="water-outline"
+                  label={`${item.ultimaLectura.humedadSuelo}% suelo`}
+                />
+                <StatItem
+                  iconName="cloud-outline"
+                  label={`${item.ultimaLectura.humedadAtmosferica}% aire`}
+                />
+                <StatItem
+                  iconName="sunny-outline"
+                  label={`${item.ultimaLectura.luz} lux`}
+                />
+              </>
+            ) : (
+              // Mostrar datos ideales de la planta si no hay lecturas
+              item.plantData && (
+                <>
+                  {typeof item.plantData.humedadSuelo === 'number' && (
+                    <StatItem
+                      iconName="water-outline"
+                      label={`${item.plantData.humedadSuelo}% ideal`}
+                      color="#6B7280"
+                    />
+                  )}
+                  {typeof item.plantData.humedadAtmosferica === 'number' && (
+                    <StatItem
+                      iconName="cloud-outline"
+                      label={`${item.plantData.humedadAtmosferica}% ideal`}
+                      color="#6B7280"
+                    />
+                  )}
+                  {item.plantData.luz && (
+                    <StatItem
+                      iconName="sunny-outline"
+                      label={`Luz ${item.plantData.luz}`}
+                      color="#6B7280"
+                    />
+                  )}
+                </>
+              )
+            )}
+          </View>
+
+          {/* Estado y última lectura */}
+          <View className="flex-row justify-between items-center mt-2 pt-2 border-t border-gray-100">
+            <View className="flex-row items-center">
+              <View
+                className="w-2 h-2 rounded-full mr-2"
+                style={{ backgroundColor: status.color }}
+              />
+              <Text className="text-xs font-medium" style={{ color: status.color }}>
+                {status.text}
+              </Text>
+            </View>
+
+            {item.ultimaLectura && (
+              <Text className="text-xs text-gray-500">
+                {formatLastReading(item.ultimaLectura.timestamp)}
+              </Text>
+            )}
+          </View>
+        </View>
+      </TouchableOpacity>
+    );
+  };
+
+  if (loading && plantasSupervisadasWithDetails.length === 0) {
+    return (
+      <ScreenWrapper title="Plantas Supervisadas">
+        <View className="flex-1 justify-center items-center">
+          <ActivityIndicator size="large" color="#10B981" />
+          <Text className="text-gray-600 mt-4">Cargando plantas supervisadas...</Text>
+        </View>
+      </ScreenWrapper>
+    );
+  }
+
+  if (error) {
+    return (
+      <ScreenWrapper title="Plantas Supervisadas">
+        <View className="flex-1 justify-center items-center px-6">
+          <Ionicons name="alert-circle-outline" size={64} color="#EF4444" />
+          <Text className="text-red-600 text-center mt-4 text-lg font-medium">
+            Error al cargar datos
+          </Text>
+          <Text className="text-gray-600 text-center mt-2">
+            {error}
+          </Text>
+          <TouchableOpacity
+            onPress={handleRefresh}
+            className="bg-green-500 px-6 py-3 rounded-lg mt-6"
+          >
+            <Text className="text-white font-medium">Reintentar</Text>
+          </TouchableOpacity>
+        </View>
+      </ScreenWrapper>
+    );
+  }
+
+  return (
+    <ScreenWrapper title="Plantas Supervisadas">
+      <FlatList
+        data={plantasSupervisadasWithDetails}
+        keyExtractor={(item) => item._id}
+        contentContainerStyle={{ paddingBottom: 20 }}
+        renderItem={renderPlantItem}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={handleRefresh}
+            colors={['#10B981']}
+            tintColor="#10B981"
+          />
+        }
+        ListEmptyComponent={
+          <View className="flex-1 justify-center items-center py-20">
+            <Ionicons name="leaf-outline" size={64} color="#D1D5DB" />
+            <Text className="text-gray-600 text-center text-lg font-medium mt-4">
+              No hay plantas supervisadas
+            </Text>
+            <Text className="text-gray-500 text-center mt-2 px-6">
+              Comienza supervisando alguna planta desde el catálogo
+            </Text>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('PlantInfoScreen')}
+              className="bg-green-500 px-6 py-3 rounded-lg mt-6"
+            >
+              <Text className="text-white font-medium">Explorar catálogo</Text>
+            </TouchableOpacity>
+          </View>
+        }
+      />
+    </ScreenWrapper>
+  );
+};
+
+export default HomeScreen;
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/navigation/AppNavigator.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/navigation/AppNavigator.tsx
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import WelcomeScreen from '../screens/WelcomeScreen';
+import LoginScreen from '../screens/LoginScreen';
+import SignUpScreen from '../screens/SignUpScreen';
+import BottomTabNavigator from './BottomTabNavigator';
+
+const Stack = createNativeStackNavigator();
+
+const AppNavigator = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Welcome"
+        screenOptions={{ headerShown: false }}
+      >
+        <Stack.Screen name="Welcome" component={WelcomeScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="SignUp" component={SignUpScreen} />
+        <Stack.Screen name="BottomTabs" component={BottomTabNavigator} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default AppNavigator;
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/navigation/BottomTabNavigator.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/navigation/BottomTabNavigator.tsx
+
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { View, Text, Pressable } from 'react-native';
+import {
+  HomeIcon,
+  MagnifyingGlassIcon,
+  HeartIcon,
+  RectangleGroupIcon,
+  UserCircleIcon
+} from 'react-native-heroicons/outline';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+import HomeScreen from '../screens/HomeScreen';
+import ExploreScreen from '../screens/ExploreScreen';
+import FavoritesScreen from '../screens/FavoritesScreen';
+import PlantInfoScreen from '../screens/PlantInfoScreen';
+import ProfileScreen from '../screens/ProfileScreen';
+
+const Tab = createBottomTabNavigator();
+
+const CustomTabBar = ({ state, descriptors, navigation }) => {
+  const insets = useSafeAreaInsets();
+
+  return (
+    <View
+      className="flex-row justify-around bg-white border-t border-gray-200"
+      style={{ paddingBottom: insets.bottom, paddingTop: 10 }}
+    >
+      {state.routes.map((route, index) => {
+        // Excluir tab visible de PlantInfo
+        if (route.name === 'PlantInfo') return null;
+
+        const isFocused = state.index === index;
+        const onPress = () => {
+          const event = navigation.emit({
+            type: 'tabPress',
+            target: route.key,
+            canPreventDefault: true
+          });
+          if (!isFocused && !event.defaultPrevented) {
+            navigation.navigate(route.name);
+          }
+        };
+
+        const icons = {
+          Home: <HomeIcon size={24} color={isFocused ? '#22c55e' : '#64748b'} />,
+          Explore: <MagnifyingGlassIcon size={24} color={isFocused ? '#22c55e' : '#64748b'} />,
+          Favorites: <HeartIcon size={24} color={isFocused ? '#22c55e' : '#64748b'} />,
+          Plants: <RectangleGroupIcon size={24} color={isFocused ? '#22c55e' : '#64748b'} />,
+          Profile: <UserCircleIcon size={24} color={isFocused ? '#22c55e' : '#64748b'} />,
+        };
+
+        return (
+          <Pressable key={route.key} onPress={onPress} className="items-center flex-1">
+            {icons[route.name]}
+            <Text className={`text-xs ${isFocused ? 'text-green-500' : 'text-slate-500'}`}>
+              {route.name}
+            </Text>
+          </Pressable>
+        );
+      })}
+    </View>
+  );
+};
+
+export default function BottomTabNavigator() {
+  return (
+    <Tab.Navigator
+      screenOptions={{ headerShown: false }}
+      tabBar={(props) => <CustomTabBar {...props} />}
+    >
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Explore" component={ExploreScreen} />
+      <Tab.Screen name="Favorites" component={FavoritesScreen} />
+
+      <Tab.Screen name="Profile" component={ProfileScreen} />
+
+      {/* PlantInfo: disponible pero no visible en los tabs */}
+      <Tab.Screen
+        name="PlantInfo"
+        component={PlantInfoScreen}
+        options={{
+          tabBarButton: () => null, // oculta el botón del tab
+          tabBarStyle: { display: 'none' }, // oculta la barra si estás dentro
+        }}
+      />
+    </Tab.Navigator>
+  );
+}
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/navigation/DrawerNavigator.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/navigation/DrawerNavigator.tsx
+import React from 'react';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import BottomTabsNavigator from './BottomTabNavigator';
+import SettingsScreen from '../screens/SettingsScreen';
+import NotificationsScreen from '../screens/NotificationsScreen';
+
+const Drawer = createDrawerNavigator();
+
+export default function DrawerNavigator() {
+  return (
+    <Drawer.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Drawer.Screen name="Inicio" component={BottomTabsNavigator} />
+      <Drawer.Screen name="Configuración" component={SettingsScreen} />
+      <Drawer.Screen name="Notificaciones" component={NotificationsScreen} />
+    </Drawer.Navigator>
+  );
+}
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/utils/dataExport.ts
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// utils/dataExport.ts - Exportar datos
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Share } from 'react-native';
+
+export const exportPlantData = async (plantaSupervisadaId: string) => {
+  try {
+    // Obtener datos de lecturas
+    const response = await fetch(`${API_BASE_URL}/lecturas/planta/${plantaSupervisadaId}`);
+    const lecturas = await response.json();
+
+    // Formatear datos para CSV
+    const csvHeader = 'Fecha,Humedad Suelo (%),Humedad Atmosférica (%),Temperatura (°C),Luz (%)\n';
+    const csvData = lecturas.map((lectura: any) =>
+      `${new Date(lectura.timestamp).toISOString()},${lectura.humedadSuelo},${lectura.humedadAtmosferica},${lectura.temperatura},${lectura.luz}`
+    ).join('\n');
+
+    const csvContent = csvHeader + csvData;
+
+    // Compartir archivo
+    await Share.share({
+      message: csvContent,
+      title: 'Datos de Planta',
+    });
+
+  } catch (error) {
+    console.error('Error exporting data:', error);
+  }
+};
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/services/api.ts
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/services/api.ts
+import axios from 'axios';
+
+// 🚨 PROBLEMA SOLUCIONADO: No usar localhost en dispositivos móviles
+// Opción 1: Configuración automática por entorno
+const getApiBaseUrl = () => {
+  if (__DEV__) {
+    // 🔄 CAMBIA ESTA IP POR LA IP DE TU COMPUTADORA LOCAL
+    // Para encontrar tu IP: Windows = ipconfig, Mac/Linux = ifconfig
+    return 'http://192.168.0.11:3000/api'; // ⚠️ REEMPLAZA 192.168.1.100 con tu IP real
+  } else {
+    // En producción usarías tu servidor real
+    return 'https://tu-servidor-produccion.com/api';
+  }
+};
+
+// Opción 2: Configuración manual (descomenta para usar)
+// const API_BASE_URL = 'http://TU_IP_LOCAL:3000/api'; // Ejemplo: http://192.168.1.105:3000/api
+
+const API_BASE_URL = getApiBaseUrl();
+
+console.log('🌐 API Base URL:', API_BASE_URL); // Para debugging
+
+// Crear instancia de axios
+const api = axios.create({
+  baseURL: API_BASE_URL,
+  timeout: 10000,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+// Interceptor para manejo de errores mejorado
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.code === 'NETWORK_ERROR' || error.message === 'Network Error') {
+      console.error('❌ Error de Red - Verifica:');
+      console.error('1. ¿Tu servidor está corriendo?');
+      console.error('2. ¿Usas IP local en lugar de localhost?');
+      console.error('3. ¿Mismo WiFi en teléfono y computadora?');
+      console.error('4. URL actual:', API_BASE_URL);
+    }
+    console.error('API Error:', error.response?.data || error.message);
+    return Promise.reject(error);
+  }
+);
+
+// Interceptor para debugging de requests
+api.interceptors.request.use(
+  (config) => {
+    console.log(`🚀 API Request: ${config.method?.toUpperCase()} ${config.url}`);
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
+// Importar tipos de database
+import { Plant, PlantaSupervisada, Lectura } from '../../types/database';
+
+export interface ApiResponse<T> {
+  success: boolean;
+  data: T;
+  message?: string;
+}
+
+// Servicios de API para cada colección
+export const apiService = {
+  // === PLANTAS ===
+  async getPlants(): Promise<Plant[]> {
+    try {
+      const response = await api.get<ApiResponse<Plant[]>>('/plants');
+      return response.data.data;
+    } catch (error) {
+      console.error('Error fetching plants:', error);
+      throw error;
+    }
+  },
+
+  async getPlant(id: string): Promise<Plant> {
+    try {
+      const response = await api.get<ApiResponse<Plant>>(`/plants/${id}`);
+      return response.data.data;
+    } catch (error) {
+      console.error('Error fetching plant:', error);
+      throw error;
+    }
+  },
+
+  async createPlant(data: Omit<Plant, '_id'>): Promise<Plant> {
+    try {
+      const response = await api.post<ApiResponse<Plant>>('/plants', data);
+      return response.data.data;
+    } catch (error) {
+      console.error('Error creating plant:', error);
+      throw error;
+    }
+  },
+
+  async updatePlant(id: string, data: Partial<Plant>): Promise<Plant> {
+    try {
+      const response = await api.put<ApiResponse<Plant>>(`/plants/${id}`, data);
+      return response.data.data;
+    } catch (error) {
+      console.error('Error updating plant:', error);
+      throw error;
+    }
+  },
+
+  async deletePlant(id: string): Promise<void> {
+    try {
+      await api.delete(`/plants/${id}`);
+    } catch (error) {
+      console.error('Error deleting plant:', error);
+      throw error;
+    }
+  },
+
+  // === PLANTAS SUPERVISADAS ===
+  async getPlantasSupervisadas(): Promise<PlantaSupervisada[]> {
+    try {
+      const response = await api.get<ApiResponse<PlantaSupervisada[]>>('/plantas-supervisadas');
+      return response.data.data;
+    } catch (error) {
+      console.error('Error fetching supervised plants:', error);
+      throw error;
+    }
+  },
+
+  async getPlantaSupervisada(id: string): Promise<PlantaSupervisada> {
+    try {
+      const response = await api.get<ApiResponse<PlantaSupervisada>>(`/plantas-supervisadas/${id}`);
+      return response.data.data;
+    } catch (error) {
+      console.error('Error fetching supervised plant:', error);
+      throw error;
+    }
+  },
+
+  async createPlantaSupervisada(data: Omit<PlantaSupervisada, '_id' | 'createdAt' | 'updatedAt'>): Promise<PlantaSupervisada> {
+    try {
+      const response = await api.post<ApiResponse<PlantaSupervisada>>('/plantas-supervisadas', data);
+      return response.data.data;
+    } catch (error) {
+      console.error('Error creating supervised plant:', error);
+      throw error;
+    }
+  },
+
+  async updatePlantaSupervisada(id: string, data: Partial<PlantaSupervisada>): Promise<PlantaSupervisada> {
+    try {
+      const response = await api.put<ApiResponse<PlantaSupervisada>>(`/plantas-supervisadas/${id}`, data);
+      return response.data.data;
+    } catch (error) {
+      console.error('Error updating supervised plant:', error);
+      throw error;
+    }
+  },
+
+  async deletePlantaSupervisada(id: string): Promise<void> {
+    try {
+      await api.delete(`/plantas-supervisadas/${id}`);
+    } catch (error) {
+      console.error('Error deleting supervised plant:', error);
+      throw error;
+    }
+  },
+
+  // === LECTURAS ===
+  async getLecturas(plantaSupervisadaId?: string): Promise<Lectura[]> {
+    try {
+      const url = plantaSupervisadaId
+        ? `/lecturas?plantaSupervisadaId=${plantaSupervisadaId}`
+        : '/lecturas';
+      const response = await api.get<ApiResponse<Lectura[]>>(url);
+      return response.data.data;
+    } catch (error) {
+      console.error('Error fetching readings:', error);
+      throw error;
+    }
+  },
+
+  async getLectura(id: string): Promise<Lectura> {
+    try {
+      const response = await api.get<ApiResponse<Lectura>>(`/lecturas/${id}`);
+      return response.data.data;
+    } catch (error) {
+      console.error('Error fetching reading:', error);
+      throw error;
+    }
+  },
+
+  async createLectura(data: Omit<Lectura, '_id'>): Promise<Lectura> {
+    try {
+      const response = await api.post<ApiResponse<Lectura>>('/lecturas', data);
+      return response.data.data;
+    } catch (error) {
+      console.error('Error creating reading:', error);
+      throw error;
+    }
+  },
+
+  // Obtener lecturas recientes para una planta supervisada
+  async getLecturasRecientes(plantaSupervisadaId: string, limit: number = 10): Promise<Lectura[]> {
+    try {
+      const response = await api.get<ApiResponse<Lectura[]>>(
+        `/lecturas/recientes/${plantaSupervisadaId}?limit=${limit}`
+      );
+      return response.data.data;
+    } catch (error) {
+      console.error('Error fetching recent readings:', error);
+      throw error;
+    }
+  },
+
+  // Obtener estadísticas de una planta supervisada
+  async getEstadisticasPlanta(plantaSupervisadaId: string, dias: number = 7): Promise<any> {
+    try {
+      const response = await api.get(
+        `/plantas-supervisadas/${plantaSupervisadaId}/estadisticas?dias=${dias}`
+      );
+      return response.data.data;
+    } catch (error) {
+      console.error('Error fetching plant statistics:', error);
+      throw error;
+    }
+  },
+
+  // Método para probar la conexión
+  async testConnection(): Promise<boolean> {
+    try {
+      await api.get('/health'); // Asume que tienes un endpoint de health check
+      return true;
+    } catch (error) {
+      console.error('Connection test failed:', error);
+      return false;
+    }
+  },
+};
+
+export default api;
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/utils/dateUtils.ts
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// utils/dateUtils.ts
+export const formatDate = (date: Date | string): string => {
+  const d = new Date(date);
+  return d.toLocaleDateString('es-MX', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+};
+
+export const formatRelativeTime = (date: Date | string): string => {
+  const now = new Date();
+  const then = new Date(date);
+  const diffMs = now.getTime() - then.getTime();
+  const diffMins = Math.floor(diffMs / (1000 * 60));
+  const diffHours = Math.floor(diffMins / 60);
+  const diffDays = Math.floor(diffHours / 24);
+
+  if (diffMins < 1) return 'Ahora mismo';
+  if (diffMins < 60) return `Hace ${diffMins} min`;
+  if (diffHours < 24) return `Hace ${diffHours}h`;
+  if (diffDays < 30) return `Hace ${diffDays} días`;
+
+  return formatDate(date);
+};
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/utils/networkUtils.ts
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// utils/networkUtils.ts
+import NetInfo from '@react-native-community/netinfo';
+
+export const getApiBaseUrl = async () => {
+  const netInfo = await NetInfo.fetch();
+  const isLocalNetwork = netInfo.type === 'wifi';
+
+  return isLocalNetwork
+    // ? 'http://192.168.1.100:3000/api'  // Tu IP local
+    ? 'http://127.0.0.1:3000/api'  // Tu IP local
+    : 'https://connectroot.com/api';
+}
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/types/navigation.ts
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/types/navigation.ts
+import { NavigatorScreenParams } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+
+// Tipos para el Stack Principal (AppNavigator)
+export type RootStackParamList = {
+  Welcome: undefined;
+  Login: undefined;
+  SignUp: undefined;
+  BottomTabs: NavigatorScreenParams<BottomTabParamList>;
+};
+
+// Tipos para Bottom Tab Navigator (necesitarás completar esto según tus tabs)
+export type BottomTabParamList = {
+  Home: undefined;
+  PlantCatalog: undefined;
+  PlantInfoScreen: { id: string };
+  // Agrega aquí tus otros tabs
+  Profile?: undefined;
+  Settings?: undefined;
+};
+
+// Tipos de navegación para HomeScreen
+// Como HomeScreen probablemente está dentro del BottomTabNavigator
+export type HomeScreenNavigationProp = BottomTabNavigationProp<
+  BottomTabParamList,
+  'Home'
+>;
+
+// Tipos para otras pantallas que puedas necesitar
+export type PlantCatalogNavigationProp = BottomTabNavigationProp<
+  BottomTabParamList,
+  'PlantCatalog'
+>;
+
+export type PlantInfoScreenNavigationProp = BottomTabNavigationProp<
+  BottomTabParamList,
+  'PlantInfoScreen'
+>;
+
+// Declaración global para React Navigation
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends BottomTabParamList {}
+  }
+}
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/utils/plantUtils.ts
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// utils/plantUtils.ts
+export const getLightLevelColor = (lightLevel: string): string => {
+  switch (lightLevel.toLowerCase()) {
+    case 'baja': return '#6b7280';
+    case 'media': return '#f59e0b';
+    case 'alta': return '#eab308';
+    case 'directa': return '#dc2626';
+    default: return '#6b7280';
+  }
+};
+
+export const getHumidityColor = (humidity: number): string => {
+  if (humidity < 30) return '#dc2626'; // Rojo - muy seco
+  if (humidity < 50) return '#f59e0b'; // Amarillo - seco
+  if (humidity < 70) return '#10b981'; // Verde - óptimo
+  if (humidity < 85) return '#3b82f6'; // Azul - húmedo
+  return '#6366f1'; // Índigo - muy húmedo
+};
+
+export const getPlantHealthStatus = (
+  currentHumidity: number,
+  optimalHumidity: number,
+  tolerance: number = 10
+): { status: 'excellent' | 'good' | 'warning' | 'danger', message: string } => {
+  const diff = Math.abs(currentHumidity - optimalHumidity);
+
+  if (diff <= tolerance * 0.5) {
+    return { status: 'excellent', message: 'Condiciones óptimas' };
+  } else if (diff <= tolerance) {
+    return { status: 'good', message: 'Condiciones buenas' };
+  } else if (diff <= tolerance * 1.5) {
+    return { status: 'warning', message: 'Requiere atención' };
+  } else {
+    return { status: 'danger', message: 'Condiciones críticas' };
+  }
+};
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/services/mongodb.ts
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/services/mongodb.ts
+import { Plant, PlantaSupervisada, Lectura } from '../../types/database';
+
+const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:3000/api';
+
+export const mongoDBService = {
+  // Plants
+  getPlants: async (forceRefresh = false): Promise<Plant[]> => {
+    const res = await fetch(`${API_BASE_URL}/plants`);
+    if (!res.ok) throw new Error('Error al obtener plantas');
+    return res.json();
+  },
+
+  getPlant: async (id: string): Promise<Plant> => {
+    const res = await fetch(`${API_BASE_URL}/plants/${id}`);
+    if (!res.ok) throw new Error('Error al obtener la planta');
+    return res.json();
+  },
+
+  createPlant: async (data: Omit<Plant, '_id'>): Promise<Plant> => {
+    const res = await fetch(`${API_BASE_URL}/plants`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error('Error al crear planta');
+    return res.json();
+  },
+
+  updatePlant: async (id: string, data: Partial<Plant>): Promise<Plant> => {
+    const res = await fetch(`${API_BASE_URL}/plants/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error('Error al actualizar planta');
+    return res.json();
+  },
+
+  deletePlant: async (id: string): Promise<void> => {
+    const res = await fetch(`${API_BASE_URL}/plants/${id}`, { method: 'DELETE' });
+    if (!res.ok) throw new Error('Error al eliminar planta');
+  },
+
+  // Supervised Plants
+  getPlantasSupervisadas: async (): Promise<PlantaSupervisada[]> => {
+    const res = await fetch(`${API_BASE_URL}/supervisadas`);
+    if (!res.ok) throw new Error('Error al obtener plantas supervisadas');
+    return res.json();
+  },
+
+  createPlantaSupervisada: async (data: Omit<PlantaSupervisada, '_id' | 'createdAt' | 'updatedAt'>): Promise<PlantaSupervisada> => {
+    const res = await fetch(`${API_BASE_URL}/supervisadas`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error('Error al crear planta supervisada');
+    return res.json();
+  },
+
+  deletePlantaSupervisada: async (id: string): Promise<void> => {
+    const res = await fetch(`${API_BASE_URL}/supervisadas/${id}`, { method: 'DELETE' });
+    if (!res.ok) throw new Error('Error al eliminar planta supervisada');
+  },
+
+  // Readings
+  getLecturasByPlantaSupervisada: async (plantaId: string): Promise<Lectura[]> => {
+    const res = await fetch(`${API_BASE_URL}/lecturas/${plantaId}`);
+    if (!res.ok) throw new Error('Error al obtener lecturas');
+    return res.json();
+  },
+
+  createLectura: async (data: Omit<Lectura, '_id'>): Promise<Lectura> => {
+    const res = await fetch(`${API_BASE_URL}/lecturas`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error('Error al crear lectura');
+    return res.json();
+  },
+};
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/screens/ExploreScreen.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/screens/ExploreScreen.tsx
+import React, { useState } from 'react';
+import {
+  FlatList,
+  Image,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+  ActivityIndicator,
+} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import ScreenWrapper from '../components/ScreenWrapper';
+// import { useTrefleSearch } from '../hooks/useTrefleSearch';
+
+export default function ExploreScreen() {
+  const navigation = useNavigation();
+  const [search, setSearch] = useState('');
+  const { plants, loading } = useTrefleSearch(search);
+
+  return (
+    <ScreenWrapper title="Explore">
+      <View className="flex-1 bg-white rounded-lg p-6">
+        {/* 🔍 Input de búsqueda */}
+        <TextInput
+          placeholder="Buscar plantas..."
+          value={search}
+          onChangeText={setSearch}
+          className="border border-gray-300 rounded-lg px-4 py-2 mb-4"
+        />
+
+        {/* 🔄 Indicador de carga */}
+        {loading && <ActivityIndicator size="large" color="#00aa00" />}
+
+        {/* 📄 Lista de resultados */}
+        <FlatList
+          data={plants}
+          keyExtractor={(item) => item.id?.toString()}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{ paddingBottom: 24 }}
+          renderItem={({ item }) => (
+            <TouchableOpacity
+              className="mb-4"
+              onPress={() => navigation.navigate('PlantsCategoryItem', { item })}
+            >
+              <View className="flex-row items-center bg-white rounded-xl shadow-md p-4">
+                <Image
+                  source={{
+                    uri: item.image_url || 'https://via.placeholder.com/100x100?text=No+Image',
+                  }}
+                  className="w-20 h-20 rounded-lg mr-4"
+                />
+                <View className="flex-1">
+                  <Text className="text-lg font-semibold text-gray-800">
+                    {item.common_name || item.scientific_name}
+                  </Text>
+                  <Text className="text-sm text-gray-500">
+                    {item.family_common_name || 'No description'}
+                  </Text>
+                </View>
+              </View>
+            </TouchableOpacity>
+          )}
+        />
+      </View>
+    </ScreenWrapper>
+  );
+}
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/services/notificationService.ts
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// services/notificationService.ts - Sistema de notificaciones
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Plant, Lectura, PlantaSupervisada } from '../../types/database';
+
+interface AlertRule {
+  id: string;
+  plantaSupervisadaId: string;
+  type: 'humidity_low' | 'humidity_high' | 'temperature_high' | 'temperature_low';
+  threshold: number;
+  enabled: boolean;
+}
+
+class NotificationService {
+  private readonly ALERTS_STORAGE_KEY = 'plant_alerts';
+  private readonly RULES_STORAGE_KEY = 'alert_rules';
+
+  async saveAlertRule(rule: AlertRule): Promise<void> {
+    try {
+      const existingRules = await this.getAlertRules();
+      const updatedRules = existingRules.filter(r => r.id !== rule.id);
+      updatedRules.push(rule);
+      await AsyncStorage.setItem(this.RULES_STORAGE_KEY, JSON.stringify(updatedRules));
+    } catch (error) {
+      console.error('Error saving alert rule:', error);
+    }
+  }
+
+  async getAlertRules(): Promise<AlertRule[]> {
+    try {
+      const rules = await AsyncStorage.getItem(this.RULES_STORAGE_KEY);
+      return rules ? JSON.parse(rules) : [];
+    } catch (error) {
+      console.error('Error getting alert rules:', error);
+      return [];
+    }
+  }
+
+  async checkForAlerts(lectura: Lectura, planta: PlantaSupervisada, plantInfo: Plant): Promise<void> {
+    const rules = await this.getAlertRules();
+    const plantRules = rules.filter(r => r.plantaSupervisadaId === planta._id && r.enabled);
+
+    for (const rule of plantRules) {
+      let shouldAlert = false;
+      let message = '';
+
+      switch (rule.type) {
+        case 'humidity_low':
+          shouldAlert = lectura.humedadSuelo < rule.threshold;
+          message = `${planta.nombre}: Humedad del suelo muy baja (${lectura.humedadSuelo}%)`;
+          break;
+        case 'humidity_high':
+          shouldAlert = lectura.humedadSuelo > rule.threshold;
+          message = `${planta.nombre}: Humedad del suelo muy alta (${lectura.humedadSuelo}%)`;
+          break;
+        case 'temperature_high':
+          shouldAlert = lectura.temperatura > rule.threshold;
+          message = `${planta.nombre}: Temperatura muy alta (${lectura.temperatura}°C)`;
+          break;
+        case 'temperature_low':
+          shouldAlert = lectura.temperatura < rule.threshold;
+          message = `${planta.nombre}: Temperatura muy baja (${lectura.temperatura}°C)`;
+          break;
+      }
+
+      if (shouldAlert) {
+        await this.createAlert({
+          id: `${rule.id}_${Date.now()}`,
+          plantaSupervisadaId: planta._id,
+          type: rule.type,
+          message,
+          timestamp: new Date(),
+          acknowledged: false
+        });
+      }
+    }
+  }
+
+  async createAlert(alert: any): Promise<void> {
+    try {
+      const existingAlerts = await this.getAlerts();
+      existingAlerts.unshift(alert);
+      // Mantener solo las últimas 50 alertas
+      const trimmedAlerts = existingAlerts.slice(0, 50);
+      await AsyncStorage.setItem(this.ALERTS_STORAGE_KEY, JSON.stringify(trimmedAlerts));
+
+      // Aquí podrías integrar con react-native-push-notification
+      console.log('🚨 Nueva alerta:', alert.message);
+    } catch (error) {
+      console.error('Error creating alert:', error);
+    }
+  }
+
+  async getAlerts(): Promise<any[]> {
+    try {
+      const alerts = await AsyncStorage.getItem(this.ALERTS_STORAGE_KEY);
+      return alerts ? JSON.parse(alerts) : [];
+    } catch (error) {
+      console.error('Error getting alerts:', error);
+      return [];
+    }
+  }
+
+  async acknowledgeAlert(alertId: string): Promise<void> {
+    try {
+      const alerts = await this.getAlerts();
+      const updatedAlerts = alerts.map(alert =>
+        alert.id === alertId ? { ...alert, acknowledged: true } : alert
+      );
+      await AsyncStorage.setItem(this.ALERTS_STORAGE_KEY, JSON.stringify(updatedAlerts));
+    } catch (error) {
+      console.error('Error acknowledging alert:', error);
+    }
+  }
+}
+
+export const notificationService = new NotificationService();
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/screens/FavoritesScreen.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/screens/FavoritesScreen.tsx
+import React from 'react';
+import { FlatList, Image, Text, TouchableOpacity, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import ScreenWrapper from '../components/ScreenWrapper';
+
+const FAVORITES = [
+  {
+    id: '1',
+    name: 'Snake Plant',
+    category: 'Air Purifier',
+    image: require('../assets/images/categoriesPlants/lowLightTolerant/LargeSnakeLaurentii/snake-plant-laurentii_large_burbank_white.webp'),
+  },
+  {
+    id: '2',
+    name: 'Peace Lily',
+    category: 'Flowering Plant',
+    image: require('../assets/images/Plant.png'),
+  },
+];
+
+export default function FavoritesScreen() {
+  const navigation = useNavigation();
+
+  return (
+    <ScreenWrapper title="Favorites">
+      {/* Contenedor blanco con padding y bordes redondeados */}
+      <View className="flex-1 bg-white rounded-lg p-6">
+        <FlatList
+          data={FAVORITES}
+          keyExtractor={(item) => item.id}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{ paddingBottom: 24 }}
+          renderItem={({ item }) => (
+            <TouchableOpacity
+              className="mb-4"
+              onPress={() => navigation.navigate('PlantsCategoryItem', { item })}
+            >
+              <View className="flex-row items-center bg-white rounded-xl shadow-md p-4">
+                <Image
+                  source={item.image}
+                  className="w-20 h-20 rounded-lg mr-4"
+                  resizeMode="cover"
+                />
+                <View className="flex-1">
+                  <Text className="text-lg font-semibold text-gray-800">
+                    {item.name}
+                  </Text>
+                  <Text className="text-sm text-gray-500">{item.category}</Text>
+                </View>
+              </View>
+            </TouchableOpacity>
+          )}
+        />
+      </View>
+    </ScreenWrapper>
+  );
+}
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/screens/ForgotPasswordScreen.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// ConnectedRoot/src/screens/ForgotPasswordScreen.tsx
+
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/native';
+
+export default function ForgotPasswordScreen() {
+  const [email, setEmail] = useState('');
+  const navigation = useNavigation();
+
+  return (
+    <SafeAreaView className="flex-1 bg-[#F2F2F2] px-6 pt-10">
+      <Text className="text-3xl font-bold text-green-700 mb-6">Forgot Password</Text>
+
+      <Text className="text-base text-gray-700 mb-2">Enter your email to reset your password:</Text>
+
+      <TextInput
+        value={email}
+        onChangeText={setEmail}
+        placeholder="Email"
+        keyboardType="email-address"
+        className="bg-white border border-gray-300 rounded-lg px-4 py-3 mb-6 text-base"
+      />
+
+      <TouchableOpacity
+        className="bg-green-600 rounded-lg py-3 items-center"
+        onPress={() => navigation.goBack()}
+      >
+        <Text className="text-white text-base font-medium">Send Reset Link</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => navigation.goBack()} className="mt-6 items-center">
+        <Text className="text-green-700 font-medium">Back to Login</Text>
+      </TouchableOpacity>
+    </SafeAreaView>
+  );
+}
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/types/database.ts
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// types/database.ts
+import { apiService } from '../src/services/api';
+
+// Tipos originales de la base de datos
+export interface Plant {
+  _id: string;
+  nombreComun: string;
+  nombreCientifico: string;
+  humedadSuelo: number; // Asumiendo que es un porcentaje
+  humedadAtmosferica: number; // Asumiendo que es un porcentaje
+  luz: 'baja' | 'media' | 'alta' | 'directa'; // O el tipo que manejes
+  tipoCultivo: string;
+  descripcion: string;
+  distribuciones: string[]; // Asumiendo array de regiones/países
+}
+
+export interface PlantaSupervisada {
+  _id: string;
+  plantId: string; // Referencia a Plants._id
+  userId?: string; // Si manejas usuarios
+  nombre?: string; // Nombre personalizado que le dio el usuario
+  fechaInicio: Date;
+  ubicacion?: string;
+  notas?: string;
+  activa: boolean;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface Lectura {
+  _id: string;
+  plantaSupervisadaId: string; // Referencia a PlantasSupervisadas._id
+  humedadSuelo: number;
+  humedadAtmosferica: number;
+  temperatura: number;
+  luz: number;
+  timestamp: Date;
+  // Agregar más campos según tus sensores
+}
+
+// Tipos extendidos para el manejo local
+export interface PlantWithStats extends Plant {
+  cantidadSupervisadas: number;
+  ultimaLectura?: Date;
+}
+
+export interface PlantaSupervisadaWithDetails extends PlantaSupervisada {
+  plantData?: Plant;
+  ultimaLectura?: Lectura;
+  promedios?: {
+    humedadSuelo: number;
+    humedadAtmosferica: number;
+    temperatura: number;
+    luz: number;
+  };
+}
+
+class DatabaseManager {
+  private plants: Plant[] = [];
+  private plantasSupervisadas: PlantaSupervisada[] = [];
+  private lecturas: Lectura[] = [];
+  private isLoading = { plants: false, supervisadas: false, lecturas: false };
+  private lastFetch = { plants: null as Date | null, supervisadas: null as Date | null, lecturas: null as Date | null };
+  private cacheDuration = 5 * 60 * 1000; // 5 minutos en ms
+
+  // === PLANTAS ===
+  async getPlants(forceRefresh = false): Promise<Plant[]> {
+    const now = new Date();
+    const shouldRefresh = forceRefresh ||
+      !this.lastFetch.plants ||
+      (now.getTime() - this.lastFetch.plants.getTime()) > this.cacheDuration;
+
+    if (!shouldRefresh && this.plants.length > 0) {
+      return this.plants;
+    }
+
+    if (this.isLoading.plants) {
+      return this.waitForLoad('plants');
+    }
+
+    try {
+      this.isLoading.plants = true;
+      this.plants = await apiService.getPlants();
+      this.lastFetch.plants = now;
+      return this.plants;
+    } catch (error) {
+      console.error('Error loading plants from MongoDB:', error);
+      return this.getFallbackPlants();
+    } finally {
+      this.isLoading.plants = false;
+    }
+  }
+
+  async getPlant(id: string): Promise<Plant | null> {
+    try {
+      return await apiService.getPlant(id);
+    } catch (error) {
+      console.error('Error loading plant from MongoDB:', error);
+      return null;
+    }
+  }
+
+  async createPlant(data: Omit<Plant, '_id'>): Promise<Plant | null> {
+    try {
+      const newPlant = await apiService.createPlant(data);
+      this.plants.push(newPlant);
+      return newPlant;
+    } catch (error) {
+      console.error('Error creating plant:', error);
+      return null;
+    }
+  }
+
+  async updatePlant(id: string, data: Partial<Plant>): Promise<Plant | null> {
+    try {
+      const updatedPlant = await apiService.updatePlant(id, data);
+      const index = this.plants.findIndex(p => p._id === id);
+      if (index !== -1) {
+        this.plants[index] = updatedPlant;
+      }
+      return updatedPlant;
+    } catch (error) {
+      console.error('Error updating plant:', error);
+      return null;
+    }
+  }
+
+  async deletePlant(id: string): Promise<boolean> {
+    try {
+      await apiService.deletePlant(id);
+      this.plants = this.plants.filter(p => p._id !== id);
+      return true;
+    } catch (error) {
+      console.error('Error deleting plant:', error);
+      return false;
+    }
+  }
+
+  // === PLANTAS SUPERVISADAS ===
+  async getPlantasSupervisadas(forceRefresh = false): Promise<PlantaSupervisada[]> {
+    const now = new Date();
+    const shouldRefresh = forceRefresh ||
+      !this.lastFetch.supervisadas ||
+      (now.getTime() - this.lastFetch.supervisadas.getTime()) > this.cacheDuration;
+
+    if (!shouldRefresh && this.plantasSupervisadas.length > 0) {
+      return this.plantasSupervisadas;
+    }
+
+    if (this.isLoading.supervisadas) {
+      return this.waitForLoad('supervisadas');
+    }
+
+    try {
+      this.isLoading.supervisadas = true;
+      this.plantasSupervisadas = await apiService.getPlantasSupervisadas();
+      this.lastFetch.supervisadas = now;
+      return this.plantasSupervisadas;
+    } catch (error) {
+      console.error('Error loading supervised plants from MongoDB:', error);
+      return [];
+    } finally {
+      this.isLoading.supervisadas = false;
+    }
+  }
+
+  async getPlantaSupervisada(id: string): Promise<PlantaSupervisada | null> {
+    try {
+      return await apiService.getPlantaSupervisada(id);
+    } catch (error) {
+      console.error('Error loading supervised plant from MongoDB:', error);
+      return null;
+    }
+  }
+
+  async createPlantaSupervisada(data: Omit<PlantaSupervisada, '_id' | 'createdAt' | 'updatedAt'>): Promise<PlantaSupervisada | null> {
+    try {
+      const newPlanta = await apiService.createPlantaSupervisada(data);
+      this.plantasSupervisadas.push(newPlanta);
+      return newPlanta;
+    } catch (error) {
+      console.error('Error creating supervised plant:', error);
+      return null;
+    }
+  }
+
+  async updatePlantaSupervisada(id: string, data: Partial<PlantaSupervisada>): Promise<PlantaSupervisada | null> {
+    try {
+      const updatedPlanta = await apiService.updatePlantaSupervisada(id, data);
+      const index = this.plantasSupervisadas.findIndex(p => p._id === id);
+      if (index !== -1) {
+        this.plantasSupervisadas[index] = updatedPlanta;
+      }
+      return updatedPlanta;
+    } catch (error) {
+      console.error('Error updating supervised plant:', error);
+      return null;
+    }
+  }
+
+  async deletePlantaSupervisada(id: string): Promise<boolean> {
+    try {
+      await apiService.deletePlantaSupervisada(id);
+      this.plantasSupervisadas = this.plantasSupervisadas.filter(p => p._id !== id);
+      return true;
+    } catch (error) {
+      console.error('Error deleting supervised plant:', error);
+      return false;
+    }
+  }
+
+  // === LECTURAS ===
+  async getLecturas(plantaSupervisadaId?: string, forceRefresh = false): Promise<Lectura[]> {
+    try {
+      return await apiService.getLecturas(plantaSupervisadaId);
+    } catch (error) {
+      console.error('Error loading readings from MongoDB:', error);
+      return [];
+    }
+  }
+
+  async getLecturasRecientes(plantaSupervisadaId: string, limit = 10): Promise<Lectura[]> {
+    try {
+      return await apiService.getLecturasRecientes(plantaSupervisadaId, limit);
+    } catch (error) {
+      console.error('Error loading recent readings:', error);
+      return [];
+    }
+  }
+
+  async createLectura(data: Omit<Lectura, '_id'>): Promise<Lectura | null> {
+    try {
+      const newLectura = await apiService.createLectura(data);
+      return newLectura;
+    } catch (error) {
+      console.error('Error creating reading:', error);
+      return null;
+    }
+  }
+
+  // === MÉTODOS COMBINADOS ===
+  async getPlantasSupervisadasWithDetails(): Promise<PlantaSupervisadaWithDetails[]> {
+    try {
+      const supervisadas = await this.getPlantasSupervisadas();
+      const plants = await this.getPlants();
+
+      const result: PlantaSupervisadaWithDetails[] = [];
+
+      for (const supervisada of supervisadas) {
+        const plantData = plants.find(p => p._id === supervisada.plantId);
+        const lecturasRecientes = await this.getLecturasRecientes(supervisada._id, 1);
+
+        result.push({
+          ...supervisada,
+          plantData,
+          ultimaLectura: lecturasRecientes[0],
+        });
+      }
+
+      return result;
+    } catch (error) {
+      console.error('Error loading supervised plants with details:', error);
+      return [];
+    }
+  }
+
+  async getEstadisticasPlanta(plantaSupervisadaId: string, dias = 7): Promise<any> {
+    try {
+      return await apiService.getEstadisticasPlanta(plantaSupervisadaId, dias);
+    } catch (error) {
+      console.error('Error loading plant statistics:', error);
+      return null;
+    }
+  }
+
+  // === UTILIDADES ===
+  private async waitForLoad(type: 'plants' | 'supervisadas' | 'lecturas'): Promise<any[]> {
+    return new Promise((resolve) => {
+      const checkLoading = () => {
+        if (!this.isLoading[type]) {
+          switch (type) {
+            case 'plants':
+              resolve(this.plants);
+              break;
+            case 'supervisadas':
+              resolve(this.plantasSupervisadas);
+              break;
+            case 'lecturas':
+              resolve(this.lecturas);
+              break;
+          }
+        } else {
+          setTimeout(checkLoading, 100);
+        }
+      };
+      checkLoading();
+    });
+  }
+
+  clearCache(): void {
+    this.plants = [];
+    this.plantasSupervisadas = [];
+    this.lecturas = [];
+    this.lastFetch = { plants: null, supervisadas: null, lecturas: null };
+  }
+
+  async checkConnection(): Promise<boolean> {
+    try {
+      await apiService.getPlants();
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  private getFallbackPlants(): Plant[] {
+    return [
+      {
+        _id: 'fallback-1',
+        nombreComun: 'Rosa',
+        nombreCientifico: 'Rosa gallica',
+        humedadSuelo: 60,
+        humedadAtmosferica: 50,
+        luz: 'alta',
+        tipoCultivo: 'Exterior',
+        descripcion: 'Planta ornamental con flores aromáticas',
+        distribuciones: ['Europa', 'Asia'],
+      },
+    ];
+  }
+}
+
+// Exportar instancia singleton
+export const database = new DatabaseManager();
+export default database;
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/App.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+import React from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import WelcomeScreen from './src/screens/WelcomeScreen';
+import LoginScreen from './src/screens/LoginScreen';
+import SignUpScreen from './src/screens/SignUpScreen';
+import DrawerNavigator from './src/navigation/DrawerNavigator';
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  return (
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Welcome" component={WelcomeScreen} />
+          <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen name="SignUp" component={SignUpScreen} />
+          <Stack.Screen name="Home" component={DrawerNavigator} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
+  );
+}
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/types/nativewind.d.ts
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+/// <reference types="nativewind/types" />
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/screens/LoginScreen.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/screens/LoginScreen.tsx
+import React from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { NavigationProp } from '@react-navigation/native';
+
+type RootStackParamList = {
+  Welcome: undefined;
+  Login: undefined;
+  Home: undefined;
+  ForgotPassword: undefined;
+};
+
+type Props = {
+  navigation: NavigationProp<RootStackParamList, 'Login'>;
+};
+
+const LoginScreen: React.FC<Props> = ({ navigation }) => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Login</Text>
+
+      {/* Botón para ir a Home */}
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate('Home')}
+      >
+        <Text style={styles.buttonText}>Ir a Home</Text>
+      </TouchableOpacity>
+
+      {/* Botón para ir a ForgotPassword */}
+      <TouchableOpacity
+        style={styles.link}
+        onPress={() => navigation.navigate('ForgotPassword')}
+      >
+        <Text style={styles.linkText}>¿Olvidaste tu contraseña?</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    paddingHorizontal: 20,
+    backgroundColor: '#fff',
+  },
+  title: {
+    fontSize: 28,
+    marginBottom: 40,
+    textAlign: 'center',
+  },
+  button: {
+    backgroundColor: '#60BF96',
+    paddingVertical: 12,
+    borderRadius: 8,
+    marginBottom: 15,
+  },
+  buttonText: {
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 18,
+  },
+  link: {
+    marginTop: 10,
+  },
+  linkText: {
+    color: '#999',
+    textAlign: 'center',
+    textDecorationLine: 'underline',
+  },
+});
+
+export default LoginScreen;
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/screens/NotificationsScreen.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+import React from 'react';
+import { View, Text, ScrollView } from 'react-native';
+import { Bell } from 'lucide-react-native';
+
+const notifications = [
+  { id: 1, title: 'Sensor A', message: 'Humedad baja detectada.', time: 'Hace 2 horas' },
+  { id: 2, title: 'Sistema', message: 'Actualización completada.', time: 'Ayer' },
+  { id: 3, title: 'Sensor B', message: 'Temperatura fuera de rango.', time: 'Hace 3 días' },
+];
+
+export default function NotificationsScreen() {
+  return (
+    <ScrollView className="flex-1 bg-white px-4 pt-6">
+      <Text className="text-xl font-bold mb-4">Notificaciones</Text>
+
+      {notifications.map(notif => (
+        <View key={notif.id} className="flex-row items-start mb-4 bg-gray-100 rounded-xl p-3">
+          <Bell size={24} className="mr-3 mt-1 text-green-600" />
+          <View className="flex-1">
+            <Text className="font-semibold">{notif.title}</Text>
+            <Text className="text-gray-700">{notif.message}</Text>
+            <Text className="text-xs text-gray-400 mt-1">{notif.time}</Text>
+          </View>
+        </View>
+      ))}
+    </ScrollView>
+  );
+}
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/screens/PlantInfoScreen.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/screens/PlantInfoScreen.tsx
+import React from 'react'
+import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native'
+import { Feather, MaterialCommunityIcons } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native'
+
+export default function PlantInfoScreen() {
+  const navigation = useNavigation()
+
+  return (
+    <ScrollView className="flex-1 bg-white px-6 pt-10">
+      {/* Header */}
+      <View className="flex-row items-center justify-between mb-4">
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Feather name="arrow-left" size={24} color="black" />
+        </TouchableOpacity>
+        <Text className="text-xl font-bold text-black">
+          Planta
+        </Text>
+        <View style={{ width: 24 }} />
+      </View>
+
+      {/* Imagen */}
+      <View className="items-center mt-2 mb-6">
+        <Image
+          source={require('../assets/photoPlant.png')}
+          className="w-40 h-40 rounded-2xl"
+          resizeMode="cover"
+        />
+        <Text className="text-2xl font-semibold text-center mt-4 text-black">
+          Monstera Deliciosa
+        </Text>
+      </View>
+
+      {/* Información ambiental */}
+      <View className="flex-row justify-between px-4 mb-8">
+        <View className="items-center">
+          <Feather name="droplet" size={24} color="#34d399" />
+          <Text className="text-lg font-semibold text-black mt-1">
+            54%
+          </Text>
+          <Text className="text-xs text-gray-500">
+            Humedad
+          </Text>
+        </View>
+        <View className="items-center">
+          <Feather name="sun" size={24} color="#facc15" />
+          <Text className="text-lg font-semibold text-black mt-1">
+            22°C
+          </Text>
+          <Text className="text-xs text-gray-500">
+            Temperatura
+          </Text>
+        </View>
+        <View className="items-center">
+          <Feather name="clock" size={24} color="#60a5fa" />
+          <Text className="text-lg font-semibold text-black mt-1">
+            10:30
+          </Text>
+          <Text className="text-xs text-gray-500">
+            Último riego
+          </Text>
+        </View>
+      </View>
+
+      {/* Botones de acción */}
+      <View className="flex-row justify-around mb-6">
+        <TouchableOpacity
+          className="bg-green-500 p-4 rounded-2xl items-center"
+          style={{ width: '30%' }}
+        >
+          <MaterialCommunityIcons name="watering-can" size={24} color="white" />
+          <Text className="text-white text-sm mt-1">
+            Regar
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          className="bg-yellow-400 p-4 rounded-2xl items-center"
+          style={{ width: '30%' }}
+        >
+          <Feather name="scissors" size={24} color="white" />
+          <Text className="text-white text-sm mt-1">
+            Podar
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          className="bg-red-400 p-4 rounded-2xl items-center"
+          style={{ width: '30%' }}
+        >
+          <Feather name="trash-2" size={24} color="white" />
+          <Text className="text-white text-sm mt-1">
+            Eliminar
+          </Text>
+        </TouchableOpacity>
+      </View>
+
+      {/* Descripción */}
+      <View>
+        <Text className="text-lg font-bold text-black mb-2">
+          Descripción
+        </Text>
+        <Text className="text-sm text-gray-600 leading-5">
+          La Monstera Deliciosa es una planta tropical conocida por sus grandes hojas perforadas. Requiere luz indirecta, humedad moderada y un riego adecuado.
+        </Text>
+      </View>
+    </ScrollView>
+  )
+}
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/screens/ProfileScreen.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/screens/ProfileScreen.tsx
+import React from 'react';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import ScreenWrapper from '../components/ScreenWrapper';
+
+type RootStackParamList = {
+  Profile: undefined;
+  SignUp: undefined;
+};
+
+type Props = NativeStackScreenProps<RootStackParamList, 'Profile'>;
+
+export default function ProfileScreen({ navigation }: Props) {
+  return (
+    <ScreenWrapper title="Perfil">
+      {/* Contenedor blanco con padding para imitar estilo previo */}
+      <View className="flex-1 bg-white p-6 rounded-lg">
+        {/* Header */}
+        <View className="flex-row items-center justify-between mb-6">
+          <Text className="text-2xl font-bold">Perfil</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+            <Text className="text-blue-600 font-semibold">Editar</Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* Avatar */}
+        <View className="items-center mb-6">
+          <Image
+            source={{ uri: 'https://i.pravatar.cc/150?img=12' }}
+            className="w-32 h-32 rounded-full"
+          />
+        </View>
+
+        {/* Info */}
+        <View className="space-y-4">
+          <View>
+            <Text className="text-gray-600 font-semibold">Nombre</Text>
+            <Text className="text-lg">Juan Pérez</Text>
+          </View>
+          <View>
+            <Text className="text-gray-600 font-semibold">Email</Text>
+            <Text className="text-lg">juan.perez@example.com</Text>
+          </View>
+          <View>
+            <Text className="text-gray-600 font-semibold">Teléfono</Text>
+            <Text className="text-lg">+52 123 456 7890</Text>
+          </View>
+        </View>
+
+        {/* Botón para cerrar sesión */}
+        <View className="mt-auto">
+          <TouchableOpacity
+            onPress={() => alert('Cerrar sesión')}
+            className="bg-red-600 py-3 rounded-lg"
+          >
+            <Text className="text-white text-center font-semibold">Cerrar sesión</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </ScreenWrapper>
+  );
+}
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/screens/SettingsScreen.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+import { View, Text, Switch, ScrollView } from 'react-native'
+import { useState } from 'react'
+import { useColorScheme } from 'nativewind'
+import { Ionicons } from '@expo/vector-icons'
+
+export default function SettingsScreen() {
+  const { colorScheme, toggleColorScheme } = useColorScheme()
+  const [notifications, setNotifications] = useState(true)
+  const [autoUpdate, setAutoUpdate] = useState(false)
+
+  return (
+    <ScrollView className="flex-1 bg-white dark:bg-black px-6 pt-10">
+      <Text className="text-2xl font-bold text-black dark:text-white mb-6">Settings</Text>
+
+      {/* General Section */}
+      <Text className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3">General</Text>
+      <View className="flex-row items-center justify-between bg-gray-100 dark:bg-gray-800 p-4 rounded-xl mb-4">
+        <View className="flex-row items-center space-x-3">
+          <Ionicons name="moon" size={24} color={colorScheme === 'dark' ? 'white' : 'black'} />
+          <Text className="text-base text-black dark:text-white">Dark Mode</Text>
+        </View>
+        <Switch value={colorScheme === 'dark'} onValueChange={toggleColorScheme} />
+      </View>
+
+      <View className="flex-row items-center justify-between bg-gray-100 dark:bg-gray-800 p-4 rounded-xl mb-4">
+        <View className="flex-row items-center space-x-3">
+          <Ionicons name="notifications" size={24} color={colorScheme === 'dark' ? 'white' : 'black'} />
+          <Text className="text-base text-black dark:text-white">Notifications</Text>
+        </View>
+        <Switch value={notifications} onValueChange={setNotifications} />
+      </View>
+
+      {/* System Updates */}
+      <Text className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3">System</Text>
+      <View className="flex-row items-center justify-between bg-gray-100 dark:bg-gray-800 p-4 rounded-xl">
+        <View className="flex-row items-center space-x-3">
+          <Ionicons name="cloud-download" size={24} color={colorScheme === 'dark' ? 'white' : 'black'} />
+          <Text className="text-base text-black dark:text-white">Auto-update</Text>
+        </View>
+        <Switch value={autoUpdate} onValueChange={setAutoUpdate} />
+      </View>
+    </ScrollView>
+  )
+}
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/screens/SignUpScreen.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/screens/LoginScreen.tsx
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+type RootStackParamList = {
+  SignUp: undefined;
+  Profile: undefined;
+  // otras pantallas si hay
+};
+
+type Props = NativeStackScreenProps<RootStackParamList, 'SignUp'>;
+
+export default function SignUpScreen({ navigation }: Props) {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  const onSubmit = () => {
+    if (password !== confirmPassword) {
+      alert('Las contraseñas no coinciden');
+      return;
+    }
+    // Aquí iría la lógica real de registro
+    alert(`Usuario registrado:\n${name}\n${email}`);
+    navigation.navigate('Profile');
+  };
+
+  return (
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      className="flex-1 bg-white"
+    >
+      <ScrollView contentContainerStyle={{ padding: 24 }} keyboardShouldPersistTaps="handled">
+        <Text className="text-3xl font-bold mb-6 text-center">Crear Cuenta</Text>
+
+        <Text className="text-gray-700 mb-1">Nombre Completo</Text>
+        <TextInput
+          value={name}
+          onChangeText={setName}
+          placeholder="Tu nombre"
+          className="border border-gray-300 rounded-lg px-4 py-3 mb-4"
+        />
+
+        <Text className="text-gray-700 mb-1">Correo Electrónico</Text>
+        <TextInput
+          value={email}
+          onChangeText={setEmail}
+          placeholder="ejemplo@mail.com"
+          keyboardType="email-address"
+          autoCapitalize="none"
+          className="border border-gray-300 rounded-lg px-4 py-3 mb-4"
+        />
+
+        <Text className="text-gray-700 mb-1">Contraseña</Text>
+        <TextInput
+          value={password}
+          onChangeText={setPassword}
+          placeholder="••••••••"
+          secureTextEntry
+          className="border border-gray-300 rounded-lg px-4 py-3 mb-4"
+        />
+
+        <Text className="text-gray-700 mb-1">Confirmar Contraseña</Text>
+        <TextInput
+          value={confirmPassword}
+          onChangeText={setConfirmPassword}
+          placeholder="••••••••"
+          secureTextEntry
+          className="border border-gray-300 rounded-lg px-4 py-6 mb-6"
+        />
+
+        <TouchableOpacity
+          onPress={onSubmit}
+          className="bg-blue-600 py-4 rounded-lg"
+        >
+          <Text className="text-white font-semibold text-center text-lg">Registrarse</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          className="mt-4"
+        >
+          <Text className="text-center text-blue-600 underline">Volver al inicio de sesión</Text>
+        </TouchableOpacity>
+      </ScrollView>
+    </KeyboardAvoidingView>
+  );
+}
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/screens/TasksScreen.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/screens/TasksScreen.tsx
+import React from 'react'
+import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
+import { Ionicons } from '@expo/vector-icons'
+
+const tasks = [
+  { id: 1, title: 'Regar planta', time: 'Hoy, 8:00 AM', icon: 'water-outline' },
+  { id: 2, title: 'Revisar tierra', time: 'Hoy, 6:00 PM', icon: 'leaf-outline' },
+  { id: 3, title: 'Cambiar maceta', time: 'Mañana, 10:00 AM', icon: 'flower-outline' },
+]
+
+export default function TasksScreen() {
+  return (
+    <View className="flex-1 bg-white px-4 pt-6">
+      <Text className="text-2xl font-bold mb-4 text-green-900">Tareas programadas</Text>
+
+      <ScrollView showsVerticalScrollIndicator={false}>
+        {tasks.map((task) => (
+          <View
+            key={task.id}
+            className="flex-row items-center bg-green-100 rounded-2xl p-4 mb-3 shadow-sm"
+          >
+            <View className="bg-green-300 p-3 rounded-xl mr-4">
+              <Ionicons name={task.icon as any} size={24} color="#fff" />
+            </View>
+            <View className="flex-1">
+              <Text className="text-lg font-semibold text-green-800">{task.title}</Text>
+              <Text className="text-sm text-green-600">{task.time}</Text>
+            </View>
+          </View>
+        ))}
+      </ScrollView>
+
+      <TouchableOpacity className="bg-green-700 p-4 rounded-full absolute bottom-6 right-6 shadow-lg">
+        <Ionicons name="add" size={28} color="#fff" />
+      </TouchableOpacity>
+    </View>
+  )
+}
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/screens/UserProfileScreen.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+import React from 'react';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { TextInput } from 'react-native-gesture-handler';
+
+type RootStackParamList = {
+  Profile: undefined;
+  SignUp: undefined;
+  // Agrega más pantallas si tienes otras rutas
+};
+
+type Props = NativeStackScreenProps<RootStackParamList, 'Profile'>;
+
+export default function ProfileScreen({ navigation }: Props) {
+  return (
+    <View className="flex-1 bg-white p-6">
+      {/* Header */}
+      <View className="flex-row items-center justify-between mb-6">
+        <Text className="text-2xl font-bold">Perfil</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
+          <Text className="text-blue-600 font-semibold">Editar</Text>
+        </TouchableOpacity>
+      </View>
+
+      {/* Avatar */}
+      <View className="items-center mb-6">
+        <Image
+          source={{ uri: 'https://i.pravatar.cc/150?img=12' }}
+          className="w-32 h-32 rounded-full"
+        />
+      </View>
+
+      {/* Info */}
+      <View className="space-y-4">
+        <View>
+          <Text className="text-gray-600 font-semibold">Nombre</Text>
+          <Text className="text-lg">Juan Pérez</Text>
+        </View>
+        <View>
+          <Text className="text-gray-600 font-semibold">Email</Text>
+          <Text className="text-lg">juan.perez@example.com</Text>
+        </View>
+        <View>
+          <Text className="text-gray-600 font-semibold">Teléfono</Text>
+          <Text className="text-lg">+52 123 456 7890</Text>
+        </View>
+      </View>
+
+      {/* Botón para cerrar sesión */}
+      <View className="mt-auto">
+        <TouchableOpacity
+          onPress={() => alert('Cerrar sesión')}
+          className="bg-red-600 py-3 rounded-lg"
+        >
+          <Text className="text-white text-center font-semibold">Cerrar sesión</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/screens/WelcomeScreen.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/screens/WelcomeScreen.tsx
+import React from 'react';
+import { View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { useNavigation } from '@react-navigation/native';
+
+const slides = [
+  { id: '1', image: require('../assets/images/Plant.png') },
+  { id: '2', image: require('../assets/images/Plant2.png') },
+  { id: '3', image: require('../assets/images/Plant3.png') },
+];
+
+const WelcomeScreen = () => {
+  const navigation = useNavigation();
+
+  return (
+    <View className="flex-1 bg-white pt-20">
+      {/* Header con título */}
+      <View className="flex-row justify-center items-center mb-2">
+        <Text className="text-3xl font-bold text-green-600">
+          ConnectedRoot.
+        </Text>
+      </View>
+
+      <Text className="text-gray-400 text-lg text-center mb-4">Enjoy the experience</Text>
+
+      {/* Carrusel de imágenes */}
+      <FlatList
+        data={slides}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        pagingEnabled
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <Image source={item.image} className="w-screen h-[400px] resize-contain" />
+        )}
+      />
+
+      {/* Botón Login */}
+      <TouchableOpacity
+        className="mx-12 mt-6"
+        onPress={() => navigation.navigate('Login' as never)}
+      >
+        <LinearGradient
+          colors={['#0AC4BA', '#2BDA8E', '#FFE358']}
+          start={{ x: 0, y: 1 }}
+          end={{ x: 1, y: 0 }}
+          className="rounded-xl py-3 px-8 items-center"
+        >
+          <Text className="text-white text-base font-medium">Login</Text>
+        </LinearGradient>
+      </TouchableOpacity>
+
+      {/* Botón Sign up */}
+      <TouchableOpacity
+        className="mx-12 mt-4 bg-white rounded-xl py-3 px-8 items-center shadow"
+        onPress={() => navigation.navigate('SignUp' as never)}
+      >
+        <Text className="text-base text-gray-800 font-medium">Sign up</Text>
+      </TouchableOpacity>
+
+      {/* Link a términos */}
+      <TouchableOpacity className="mt-4 items-center">
+        <Text className="text-xs text-gray-400 underline">Terms of service</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+
+export default WelcomeScreen;
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/hooks/useLecturas.ts
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// hooks/useLecturas.ts
+import { useState, useEffect } from 'react';
+import { Lectura } from '../../types/database';
+import { database } from '../../types/database'; // Importamos desde el archivo database actualizado
+
+export const useLecturas = (plantaSupervisadaId: string) => {
+  const [lecturas, setLecturas] = useState<Lectura[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchLecturas = async () => {
+    if (!plantaSupervisadaId) return;
+
+    try {
+      setLoading(true);
+      setError(null);
+      const data = await database.getLecturas(plantaSupervisadaId);
+      const ordenadas = data.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+      setLecturas(ordenadas);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Error cargando lecturas');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const fetchLecturasRecientes = async (limit = 10) => {
+    if (!plantaSupervisadaId) return;
+
+    try {
+      setLoading(true);
+      setError(null);
+      const data = await database.getLecturasRecientes(plantaSupervisadaId, limit);
+      setLecturas(data);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Error cargando lecturas recientes');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const addLectura = async (lecturaData: Omit<Lectura, '_id'>) => {
+    try {
+      const newLectura = await database.createLectura(lecturaData);
+      if (!newLectura) throw new Error('No se pudo crear la lectura');
+      setLecturas(prev => [...prev, newLectura].sort((a, b) =>
+        new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
+      ));
+      return newLectura;
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Error creando lectura');
+      throw err;
+    }
+  };
+
+  const getEstadisticas = async (dias = 7) => {
+    if (!plantaSupervisadaId) return null;
+
+    try {
+      return await database.getEstadisticasPlanta(plantaSupervisadaId, dias);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Error cargando estadísticas');
+      return null;
+    }
+  };
+
+  useEffect(() => {
+    fetchLecturas();
+  }, [plantaSupervisadaId]);
+
+  return {
+    lecturas,
+    loading,
+    error,
+    refetch: fetchLecturas,
+    fetchLecturasRecientes,
+    addLectura,
+    getEstadisticas,
+  };
+};
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/.env
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+# .env
+const API_BASE_URL=http://localhost:3000/api  # Para desarrollo
+# API_BASE_URL=https://tu-backend-heroku.herokuapp.com/api  # Para producción
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/hooks/useOfflineSync.ts
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// hooks/useOfflineSync.ts - Sincronización offline
+import { useState, useEffect } from 'react';
+import NetInfo from '@react-native-community/netinfo';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+export const useOfflineSync = () => {
+  const [isOnline, setIsOnline] = useState(true);
+  const [pendingSync, setPendingSync] = useState<any[]>([]);
+
+  useEffect(() => {
+    const unsubscribe = NetInfo.addEventListener(state => {
+      setIsOnline(state.isConnected ?? false);
+      if (state.isConnected) {
+        syncPendingData();
+      }
+    });
+
+    loadPendingSync();
+    return unsubscribe;
+  }, []);
+
+  const loadPendingSync = async () => {
+    try {
+      const pending = await AsyncStorage.getItem('pending_sync');
+      setPendingSync(pending ? JSON.parse(pending) : []);
+    } catch (error) {
+      console.error('Error loading pending sync:', error);
+    }
+  };
+
+  const addToPendingSync = async (data: any) => {
+    try {
+      const pending = [...pendingSync, { ...data, timestamp: new Date() }];
+      setPendingSync(pending);
+      await AsyncStorage.setItem('pending_sync', JSON.stringify(pending));
+    } catch (error) {
+      console.error('Error adding to pending sync:', error);
+    }
+  };
+
+  const syncPendingData = async () => {
+    if (pendingSync.length === 0) return;
+
+    try {
+      for (const item of pendingSync) {
+        // Enviar datos pendientes al servidor
+        await fetch(`${API_BASE_URL}/${item.endpoint}`, {
+          method: item.method,
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(item.data)
+        });
+      }
+
+      // Limpiar datos sincronizados
+      setPendingSync([]);
+      await AsyncStorage.removeItem('pending_sync');
+    } catch (error) {
+      console.error('Error syncing pending data:', error);
+    }
+  };
+
+  return {
+    isOnline,
+    pendingSync: pendingSync.length,
+    addToPendingSync
+  };
+};
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/hooks/usePlantasSupervisadas.ts
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// src/hooks/usePlantasSupervisadas.ts
+import { useState, useCallback } from 'react';
+import { PlantaSupervisadaWithDetails } from '../../types/database';
+import { database } from '../../types/database';
+
+interface UsePlantasSupervisadasReturn {
+  plantasSupervisadasWithDetails: PlantaSupervisadaWithDetails[];
+  loading: boolean;
+  error: string | null;
+  fetchWithDetails: () => Promise<void>;
+  refreshData: () => Promise<void>;
+}
+
+export const usePlantasSupervisadas = (): UsePlantasSupervisadasReturn => {
+  const [plantasSupervisadasWithDetails, setPlantasSupervisadasWithDetails] = useState<PlantaSupervisadaWithDetails[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchWithDetails = useCallback(async (): Promise<void> => {
+    setLoading(true);
+    setError(null);
+
+    try {
+      // Usa el método que ya tienes en tu DatabaseManager
+      const data = await database.getPlantasSupervisadasWithDetails();
+      setPlantasSupervisadasWithDetails(data);
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : 'Error cargando plantas supervisadas';
+      setError(errorMessage);
+      console.error('Error fetching plantas supervisadas:', err);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  const refreshData = useCallback(async (): Promise<void> => {
+    // Fuerza un refresh de los datos
+    try {
+      const data = await database.getPlantasSupervisadasWithDetails();
+      setPlantasSupervisadasWithDetails(data);
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : 'Error refrescando datos';
+      setError(errorMessage);
+    }
+  }, []);
+
+  return {
+    plantasSupervisadasWithDetails,
+    loading,
+    error,
+    fetchWithDetails,
+    refreshData,
+  };
+};
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/ConnectedRoot/src/components/SupervisedPlants.tsx
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+// components/SupervisedPlants.tsx
+import React, { useState } from 'react';
+import { View, Text, FlatList, TouchableOpacity, Alert, Modal, TextInput } from 'react-native';
+import { usePlantasSupervisadas } from '../hooks/usePlantasSupervisadas';
+import { PlantaSupervisada } from '../../types/database';
+
+export const SupervisedPlants: React.FC = () => {
+  const {
+    plantasSupervisadas,
+    loading,
+    error,
+    addPlantaSupervisada,
+    updatePlantaSupervisada,
+    deletePlantaSupervisada
+  } = usePlantasSupervisadas();
+
+  const [showAddModal, setShowAddModal] = useState(false);
+  const [newPlantData, setNewPlantData] = useState({
+    plantId: '',
+    nombre: '',
+    ubicacion: '',
+    notas: ''
+  });
+
+  const handleAddPlant = async () => {
+    try {
+      await addPlantaSupervisada({
+        ...newPlantData,
+        fechaInicio: new Date(),
+        activa: true,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      });
+      setShowAddModal(false);
+      setNewPlantData({ plantId: '', nombre: '', ubicacion: '', notas: '' });
+    } catch (error) {
+      Alert.alert('Error', 'No se pudo agregar la planta supervisada');
+    }
+  };
+
+  const handleDeletePlant = (planta: PlantaSupervisada) => {
+    Alert.alert(
+      'Confirmar eliminación',
+      `¿Estás seguro de que quieres eliminar "${planta.nombre}"?`,
+      [
+        { text: 'Cancelar', style: 'cancel' },
+        {
+          text: 'Eliminar',
+          style: 'destructive',
+          onPress: () => deletePlantaSupervisada(planta._id)
+        }
+      ]
+    );
+  };
+
+  const renderSupervisedPlant = ({ item }: { item: PlantaSupervisada }) => (
+    <View className="bg-white rounded-lg p-4 mb-3 shadow-sm">
+      <View className="flex-row justify-between items-start">
+        <View className="flex-1">
+          <Text className="text-lg font-bold text-green-800">{item.nombre}</Text>
+          <Text className="text-sm text-gray-600">ID Planta: {item.plantId}</Text>
+          {item.ubicacion && (
+            <Text className="text-sm text-blue-600">📍 {item.ubicacion}</Text>
+          )}
+          <Text className="text-xs text-gray-500 mt-1">
+            Iniciado: {new Date(item.fechaInicio).toLocaleDateString()}
+          </Text>
+        </View>
+        <View className="flex-row">
+          <TouchableOpacity
+            onPress={() => handleDeletePlant(item)}
+            className="bg-red-500 px-3 py-1 rounded ml-2"
+          >
+            <Text className="text-white text-xs">Eliminar</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      {item.notas && (
+        <Text className="text-sm text-gray-700 mt-2" numberOfLines={2}>
+          💭 {item.notas}
+        </Text>
+      )}
+      <View className="flex-row justify-between items-center mt-2">
+        <Text className={`text-sm font-semibold ${item.activa ? 'text-green-600' : 'text-red-600'}`}>
+          {item.activa ? '🟢 Activa' : '🔴 Inactiva'}
+        </Text>
+      </View>
+    </View>
+  );
+
+  return (
+    <View className="flex-1 bg-gray-50">
+      <View className="p-4">
+        <TouchableOpacity
+          onPress={() => setShowAddModal(true)}
+          className="bg-green-600 px-4 py-3 rounded-lg mb-4"
+        >
+          <Text className="text-white font-semibold text-center">+ Agregar Planta Supervisada</Text>
+        </TouchableOpacity>
+      </View>
+
+      <FlatList
+        data={plantasSupervisadas}
+        renderItem={renderSupervisedPlant}
+        keyExtractor={(item) => item._id}
+        contentContainerStyle={{ paddingHorizontal: 16 }}
+        showsVerticalScrollIndicator={false}
+      />
+
+      {/* Modal para agregar nueva planta supervisada */}
+      <Modal visible={showAddModal} animationType="slide" transparent>
+        <View className="flex-1 justify-center items-center bg-black/50">
+          <View className="bg-white rounded-lg p-6 w-11/12 max-w-md">
+            <Text className="text-lg font-bold mb-4">Nueva Planta Supervisada</Text>
+
+            <TextInput
+              placeholder="ID de la planta"
+              value={newPlantData.plantId}
+              onChangeText={(text) => setNewPlantData(prev => ({ ...prev, plantId: text }))}
+              className="border border-gray-300 rounded px-3 py-2 mb-3"
+            />
+
+            <TextInput
+              placeholder="Nombre personalizado"
+              value={newPlantData.nombre}
+              onChangeText={(text) => setNewPlantData(prev => ({ ...prev, nombre: text }))}
+              className="border border-gray-300 rounded px-3 py-2 mb-3"
+            />
+
+            <TextInput
+              placeholder="Ubicación"
+              value={newPlantData.ubicacion}
+              onChangeText={(text) => setNewPlantData(prev => ({ ...prev, ubicacion: text }))}
+              className="border border-gray-300 rounded px-3 py-2 mb-3"
+            />
+
+            <TextInput
+              placeholder="Notas"
+              value={newPlantData.notas}
+              onChangeText={(text) => setNewPlantData(prev => ({ ...prev, notas: text }))}
+              className="border border-gray-300 rounded px-3 py-2 mb-4"
+              multiline
+              numberOfLines={3}
+            />
+
+            <View className="flex-row justify-end">
+              <TouchableOpacity
+                onPress={() => setShowAddModal(false)}
+                className="bg-gray-500 px-4 py-2 rounded mr-2"
+              >
+                <Text className="text-white">Cancelar</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={handleAddPlant}
+                className="bg-green-600 px-4 py-2 rounded"
+              >
+                <Text className="text-white">Agregar</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
+    </View>
+  );
+};
+
+
+
+===============================================
+ARCHIVO: /home/titino/Documentos/UTT_CUATRIMESTRE_5/Proyecto_5C/App-Movil/plants-backend/.env
+FECHA: mar 05 ago 2025 15:19:59 PDT
+===============================================
+MONGODB_URI = 'mongodb+srv://0323105932:0323105932@rootdb.mnmbdoa.mongodb.net/RootDB';
