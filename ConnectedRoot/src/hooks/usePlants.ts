@@ -1,6 +1,6 @@
-/ hooks/usePlants.ts
+// hooks/usePlants.ts
 import { useState, useEffect } from 'react';
-import { Plant } from '../types/database';
+import { Plant } from '../../types/database';
 import { mongoDBService } from '../services/mongodb';
 
 export const usePlants = () => {

@@ -1,55 +1,69 @@
-// hooks/usePlantasSupervisadas.ts
+// hooks/usePlants.ts - Hook adicional para manejar el catálogo de plantas
 import { useState, useEffect } from 'react';
-import { PlantaSupervisada } from '../types/database';
-import { mongoDBService } from '../services/mongodb';
+import { Plant } from '../../types/database';
+import { database } from '../../types/database';
 
-export const usePlantasSupervisadas = () => {
-  const [plantasSupervisadas, setPlantasSupervisadas] = useState<PlantaSupervisada[]>([]);
+export const usePlants = () => {
+  const [plants, setPlants] = useState<Plant[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchPlantasSupervisadas = async () => {
+  const fetchPlants = async (forceRefresh = false) => {
     try {
       setLoading(true);
       setError(null);
-      const data = await mongoDBService.getPlantasSupervisadas();
-      setPlantasSupervisadas(data);
+      const data = await database.getPlants(forceRefresh);
+      setPlants(data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Error desconocido');
+      setError(err instanceof Error ? err.message : 'Error cargando plantas');
     } finally {
       setLoading(false);
     }
   };
 
-  const addPlantaSupervisada = async (plantData: Omit<PlantaSupervisada, '_id' | 'createdAt' | 'updatedAt'>) => {
+  const getPlant = async (id: string): Promise<Plant | null> => {
     try {
-      const newPlanta = await mongoDBService.createPlantaSupervisada(plantData);
-      setPlantasSupervisadas(prev => [...prev, newPlanta]);
-      return newPlanta;
+      return await database.getPlant(id);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Error creando planta supervisada');
+      setError(err instanceof Error ? err.message : 'Error obteniendo planta');
+      return null;
+    }
+  };
+
+  const addPlant = async (plantData: Omit<Plant, '_id'>) => {
+    try {
+      const newPlant = await database.createPlant(plantData);
+      if (!newPlant) throw new Error('No se pudo crear la planta');
+      
+      setPlants(prev => [...prev, newPlant]);
+      return newPlant;
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Error creando planta');
       throw err;
     }
   };
 
-  const updatePlantaSupervisada = async (id: string, updates: Partial<PlantaSupervisada>) => {
+  const updatePlant = async (id: string, updates: Partial<Plant>) => {
     try {
-      const updatedPlanta = await mongoDBService.updatePlantaSupervisada(id, updates);
-      setPlantasSupervisadas(prev => 
-        prev.map(planta => planta._id === id ? updatedPlanta : planta)
+      const updatedPlant = await database.updatePlant(id, updates);
+      if (!updatedPlant) throw new Error('No se pudo actualizar la planta');
+      
+      setPlants(prev => 
+        prev.map(plant => plant._id === id ? updatedPlant : plant)
       );
-      return updatedPlanta;
+      
+      return updatedPlant;
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Error actualizando planta');
       throw err;
     }
   };
 
-  const deletePlantaSupervisada = async (id: string) => {
+  const deletePlant = async (id: string) => {
     try {
-      const success = await mongoDBService.deletePlantaSupervisada(id);
+      const success = await database.deletePlant(id);
       if (success) {
-        setPlantasSupervisadas(prev => prev.filter(planta => planta._id !== id));
+        setPlants(prev => prev.filter(plant => plant._id !== id));
       }
       return success;
     } catch (err) {
@@ -59,16 +73,17 @@ export const usePlantasSupervisadas = () => {
   };
 
   useEffect(() => {
-    fetchPlantasSupervisadas();
+    fetchPlants();
   }, []);
 
   return {
-    plantasSupervisadas,
+    plants,
     loading,
     error,
-    refetch: fetchPlantasSupervisadas,
-    addPlantaSupervisada,
-    updatePlantaSupervisada,
-    deletePlantaSupervisada,
+    refetch: fetchPlants,
+    getPlant,
+    addPlant,
+    updatePlant,
+    deletePlant,
   };
 };
