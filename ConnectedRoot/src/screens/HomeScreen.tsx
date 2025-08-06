@@ -221,7 +221,7 @@ const HomeScreen: React.FC = () => {
           <ActivityIndicator size="large" color="#10B981" />
           <Text className="text-gray-600 mt-4">Cargando plantas supervisadas...</Text>
           <Text className="text-gray-400 mt-2 text-sm text-center">
-            🚀 Optimizado: Solo tus plantas, no todo el catálogo
+            🚀 Optimizado: Cargando Plantas Supervisadas
           </Text>
         </View>
       </ScreenWrapper>

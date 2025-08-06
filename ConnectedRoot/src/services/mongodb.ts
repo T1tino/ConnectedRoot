@@ -1,7 +1,7 @@
 // src/services/mongodb.ts
 import { Plant, PlantaSupervisada, Lectura } from '../../types/database';
 
-const API_BASE_URL = process.env.API_BASE_URL || 'http://192.168.0.254:3000/api';
+const API_BASE_URL = process.env.API_BASE_URL || 'http://192.168.128.196:3000/api';
 
 export const mongoDBService = {
   // Plants

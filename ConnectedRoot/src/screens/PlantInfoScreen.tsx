@@ -240,48 +240,117 @@ export default function PlantInfoScreen() {
         </View>
       )}
 
-      {/* Última actualización */}
+      {/* Última actualización y comparación con recomendaciones */}
       {plantData.ultimaLectura && (
         <View className="bg-gray-50 rounded-lg p-3 mb-6">
-          <View className="flex-row items-center justify-center">
-            <Feather name="clock" size={16} color="#6B7280" />
-            <Text className="text-sm text-gray-600 ml-2">
-              Última lectura: {formatLastReading(plantData.ultimaLectura.timestamp)}
-            </Text>
+          <View className="flex-row items-center justify-between mb-3">
+            <View className="flex-row items-center">
+              <Feather name="clock" size={16} color="#6B7280" />
+              <Text className="text-sm text-gray-700 ml-2 font-medium">
+                Última lectura: {formatLastReading(plantData.ultimaLectura.timestamp)}
+              </Text>
+            </View>
+            <View className="flex-row items-center">
+              <View 
+                className="w-2 h-2 rounded-full mr-2"
+                style={{ backgroundColor: status.color }}
+              />
+              <Text className="text-xs" style={{ color: status.color }}>
+                {status.text}
+              </Text>
+            </View>
           </View>
+
+          {/* Comparación con recomendaciones si están disponibles */}
+          {plantData.plantData && (
+            <View className="space-y-2">
+              {plantData.plantData.humedadSuelo && plantData.plantData.humedadSuelo !== '' && plantData.plantData.humedadSuelo !== null && (
+                <View className="flex-row items-center justify-between">
+                  <Text className="text-xs text-gray-600">Humedad suelo vs recomendado:</Text>
+                  <Text className="text-xs text-gray-700">
+                    {plantData.ultimaLectura.humedadSuelo}% / {plantData.plantData.humedadSuelo}%
+                    {Math.abs(Number(plantData.ultimaLectura.humedadSuelo) - Number(plantData.plantData.humedadSuelo)) <= 5 && (
+                      <Text className="text-green-600"> ✓</Text>
+                    )}
+                  </Text>
+                </View>
+              )}
+              
+              {plantData.plantData.humedadAtmosferica && plantData.plantData.humedadAtmosferica !== '' && plantData.plantData.humedadAtmosferica !== null && (
+                <View className="flex-row items-center justify-between">
+                  <Text className="text-xs text-gray-600">Humedad aire vs recomendado:</Text>
+                  <Text className="text-xs text-gray-700">
+                    {plantData.ultimaLectura.humedadAtmosferica}% / {plantData.plantData.humedadAtmosferica}%
+                    {Math.abs(Number(plantData.ultimaLectura.humedadAtmosferica) - Number(plantData.plantData.humedadAtmosferica)) <= 5 && (
+                      <Text className="text-green-600"> ✓</Text>
+                    )}
+                  </Text>
+                </View>
+              )}
+            </View>
+          )}
         </View>
       )}
 
-      {/* Valores ideales de la planta */}
+      {/* Valores ideales/recomendaciones de la planta */}
       {plantData.plantData && (
         <View className="mb-6">
           <Text className="text-lg font-bold text-black mb-3">
-            Condiciones Ideales
+            Recomendaciones de Cultivo
           </Text>
           <View className="bg-green-50 rounded-lg p-4">
-            <View className="flex-row justify-between mb-2">
-              {typeof plantData.plantData.humedadSuelo === 'number' && (
-                <View className="items-center">
-                  <Text className="text-sm text-green-700 font-medium">
-                    {plantData.plantData.humedadSuelo}%
-                  </Text>
-                  <Text className="text-xs text-green-600">Humedad Suelo</Text>
+            {/* Mostrar recomendaciones cuando estén disponibles */}
+            <View className="space-y-3">
+              {plantData.plantData.humedadSuelo && plantData.plantData.humedadSuelo !== '' && plantData.plantData.humedadSuelo !== null && (
+                <View className="flex-row items-center justify-between">
+                  <View className="flex-row items-center">
+                    <Feather name="droplet" size={16} color="#059669" />
+                    <Text className="text-sm text-green-800 ml-2">Humedad del Suelo</Text>
+                  </View>
+                  <Text className="text-sm text-green-700 font-medium">{plantData.plantData.humedadSuelo}%</Text>
                 </View>
               )}
-              {typeof plantData.plantData.humedadAtmosferica === 'number' && (
-                <View className="items-center">
-                  <Text className="text-sm text-green-700 font-medium">
-                    {plantData.plantData.humedadAtmosferica}%
-                  </Text>
-                  <Text className="text-xs text-green-600">Humedad Aire</Text>
+              
+              {plantData.plantData.humedadAtmosferica && plantData.plantData.humedadAtmosferica !== '' && plantData.plantData.humedadAtmosferica !== null && (
+                <View className="flex-row items-center justify-between">
+                  <View className="flex-row items-center">
+                    <Ionicons name="water-outline" size={16} color="#059669" />
+                    <Text className="text-sm text-green-800 ml-2">Humedad Ambiental</Text>
+                  </View>
+                  <Text className="text-sm text-green-700 font-medium">{plantData.plantData.humedadAtmosferica}%</Text>
                 </View>
               )}
-              {plantData.plantData.luz && (
-                <View className="items-center">
-                  <Text className="text-sm text-green-700 font-medium">
-                    {plantData.plantData.luz}
+              
+              {plantData.plantData.luz && plantData.plantData.luz !== '' && plantData.plantData.luz !== null && (
+                <View className="flex-row items-center justify-between">
+                  <View className="flex-row items-center">
+                    <Feather name="sun" size={16} color="#059669" />
+                    <Text className="text-sm text-green-800 ml-2">Requerimiento de Luz</Text>
+                  </View>
+                  <Text className="text-sm text-green-700 font-medium capitalize">{plantData.plantData.luz}</Text>
+                </View>
+              )}
+              
+              {plantData.plantData.tipoCultivo && plantData.plantData.tipoCultivo !== '' && plantData.plantData.tipoCultivo !== null && (
+                <View className="flex-row items-center justify-between">
+                  <View className="flex-row items-center">
+                    <Ionicons name="leaf-outline" size={16} color="#059669" />
+                    <Text className="text-sm text-green-800 ml-2">Tipo de Cultivo</Text>
+                  </View>
+                  <Text className="text-sm text-green-700 font-medium">{plantData.plantData.tipoCultivo}</Text>
+                </View>
+              )}
+              
+              {/* Mostrar mensaje cuando no hay recomendaciones */}
+              {(!plantData.plantData.humedadSuelo || plantData.plantData.humedadSuelo === '' || plantData.plantData.humedadSuelo === null) &&
+               (!plantData.plantData.humedadAtmosferica || plantData.plantData.humedadAtmosferica === '' || plantData.plantData.humedadAtmosferica === null) &&
+               (!plantData.plantData.luz || plantData.plantData.luz === '' || plantData.plantData.luz === null) &&
+               (!plantData.plantData.tipoCultivo || plantData.plantData.tipoCultivo === '' || plantData.plantData.tipoCultivo === null) && (
+                <View className="items-center py-4">
+                  <Ionicons name="information-circle-outline" size={24} color="#6B7280" />
+                  <Text className="text-center text-gray-600 mt-2 text-sm">
+                    No hay recomendaciones específicas disponibles para esta planta
                   </Text>
-                  <Text className="text-xs text-green-600">Luz</Text>
                 </View>
               )}
             </View>
@@ -327,40 +396,65 @@ export default function PlantInfoScreen() {
           Descripción
         </Text>
         <Text className="text-sm text-gray-600 leading-5">
-          {plantData.plantData?.descripcion || 
-           plantData.descripcion || 
-           `${plantName} es una planta que requiere cuidados específicos. Mantén un seguimiento regular de sus condiciones para asegurar un crecimiento saludable.`}
+          {plantData.plantData?.descripcion && plantData.plantData.descripcion !== '' && plantData.plantData.descripcion !== null
+           ? plantData.plantData.descripcion 
+           : `${plantName} es una planta ${scientificName ? `(${scientificName}) ` : ''}que requiere cuidados específicos. Mantén un seguimiento regular de sus condiciones para asegurar un crecimiento saludable. Las recomendaciones específicas aparecerán cuando estén disponibles en la base de datos.`}
         </Text>
       </View>
 
-      {/* Información adicional */}
-      {plantData.plantData && (
-        <View className="mb-8">
-          <Text className="text-lg font-bold text-black mb-3">
-            Información de Cuidados
-          </Text>
-          <View className="bg-blue-50 rounded-lg p-4">
-            {plantData.plantData.cuidados && (
-              <View className="mb-3">
-                <Text className="text-sm font-medium text-blue-800 mb-1">Cuidados:</Text>
-                <Text className="text-sm text-blue-700">{plantData.plantData.cuidados}</Text>
+      {/* Información adicional de la planta supervisada */}
+      <View className="mb-8">
+        <Text className="text-lg font-bold text-black mb-3">
+          Información Personal
+        </Text>
+        <View className="bg-blue-50 rounded-lg p-4 space-y-3">
+          {/* Fecha de inicio del seguimiento */}
+          <View className="flex-row items-center justify-between">
+            <View className="flex-row items-center">
+              <Feather name="calendar" size={16} color="#2563EB" />
+              <Text className="text-sm text-blue-800 ml-2">Supervisada desde</Text>
+            </View>
+            <Text className="text-sm text-blue-700 font-medium">
+              {new Date(plantData.fechaInicio).toLocaleDateString('es-ES', {
+                day: '2-digit',
+                month: 'short',
+                year: 'numeric'
+              })}
+            </Text>
+          </View>
+
+          {plantData.ubicacion && (
+            <View className="flex-row items-center justify-between">
+              <View className="flex-row items-center">
+                <Ionicons name="location-outline" size={16} color="#2563EB" />
+                <Text className="text-sm text-blue-800 ml-2">Ubicación</Text>
               </View>
-            )}
-            {plantData.plantData.fertilizacion && (
-              <View className="mb-3">
-                <Text className="text-sm font-medium text-blue-800 mb-1">Fertilización:</Text>
-                <Text className="text-sm text-blue-700">{plantData.plantData.fertilizacion}</Text>
+              <Text className="text-sm text-blue-700 font-medium">{plantData.ubicacion}</Text>
+            </View>
+          )}
+
+          {plantData.notas && (
+            <View>
+              <View className="flex-row items-center mb-2">
+                <Feather name="file-text" size={16} color="#2563EB" />
+                <Text className="text-sm text-blue-800 ml-2 font-medium">Notas</Text>
               </View>
-            )}
-            {plantData.plantData.riego && (
-              <View>
-                <Text className="text-sm font-medium text-blue-800 mb-1">Riego:</Text>
-                <Text className="text-sm text-blue-700">{plantData.plantData.riego}</Text>
-              </View>
-            )}
+              <Text className="text-sm text-blue-700 ml-6">{plantData.notas}</Text>
+            </View>
+          )}
+
+          {/* Estado del seguimiento */}
+          <View className="flex-row items-center justify-between pt-2 border-t border-blue-200">
+            <View className="flex-row items-center">
+              <Ionicons name={plantData.activa ? "checkmark-circle" : "pause-circle"} size={16} color={plantData.activa ? "#10B981" : "#F59E0B"} />
+              <Text className="text-sm text-blue-800 ml-2">Estado del seguimiento</Text>
+            </View>
+            <Text className={`text-sm font-medium ${plantData.activa ? 'text-green-600' : 'text-yellow-600'}`}>
+              {plantData.activa ? 'Activo' : 'Pausado'}
+            </Text>
           </View>
         </View>
-      )}
+      </View>
     </ScrollView>
   )
 }
