@@ -62,38 +62,38 @@ app.get('/api/plants/search', async (req, res) => {
 });
 
 // ROUTES PARA PLANTAS SUPERVISADAS
-app.get('/api/plantas-supervisadas', async (req, res) => {
+app.get('/api/plantasSupervisadas', async (req, res) => {
   try {
-    const plantas = await db.collection('PlantasSupervisadas').find({}).toArray();
+    const plantas = await db.collection('plantasSupervisadas').find({}).toArray();
     res.json(plantas);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
 
-app.post('/api/plantas-supervisadas', async (req, res) => {
+app.post('/api/plantasSupervisadas', async (req, res) => {
   try {
     const plantaData = {
       ...req.body,
       createdAt: new Date(),
       updatedAt: new Date()
     };
-    const result = await db.collection('PlantasSupervisadas').insertOne(plantaData);
-    const newPlanta = await db.collection('PlantasSupervisadas').findOne({ _id: result.insertedId });
+    const result = await db.collection('plantasSupervisadas').insertOne(plantaData);
+    const newPlanta = await db.collection('plantasSupervisadas').findOne({ _id: result.insertedId });
     res.status(201).json(newPlanta);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
 
-app.put('/api/plantas-supervisadas/:id', async (req, res) => {
+app.put('/api/plantasSupervisadas/:id', async (req, res) => {
   try {
     const { ObjectId } = require('mongodb');
     const updateData = {
       ...req.body,
       updatedAt: new Date()
     };
-    const result = await db.collection('PlantasSupervisadas').findOneAndUpdate(
+    const result = await db.collection('plantasSupervisadas').findOneAndUpdate(
       { _id: new ObjectId(req.params.id) },
       { $set: updateData },
       { returnDocument: 'after' }
@@ -107,10 +107,10 @@ app.put('/api/plantas-supervisadas/:id', async (req, res) => {
   }
 });
 
-app.delete('/api/plantas-supervisadas/:id', async (req, res) => {
+app.delete('/api/plantasSupervisadas/:id', async (req, res) => {
   try {
     const { ObjectId } = require('mongodb');
-    const result = await db.collection('PlantasSupervisadas').deleteOne({ _id: new ObjectId(req.params.id) });
+    const result = await db.collection('plantasSupervisadas').deleteOne({ _id: new ObjectId(req.params.id) });
     if (result.deletedCount === 0) {
       return res.status(404).json({ error: 'Planta supervisada no encontrada' });
     }

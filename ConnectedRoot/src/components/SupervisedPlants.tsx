@@ -5,15 +5,15 @@ import { usePlantasSupervisadas } from '../hooks/usePlantasSupervisadas';
 import { PlantaSupervisada } from '../../types/database';
 
 export const SupervisedPlants: React.FC = () => {
-  const { 
-    plantasSupervisadas, 
-    loading, 
-    error, 
-    addPlantaSupervisada, 
+  const {
+    plantasSupervisadas,
+    loading,
+    error,
+    addPlantaSupervisada,
     updatePlantaSupervisada,
-    deletePlantaSupervisada 
+    deletePlantaSupervisada
   } = usePlantasSupervisadas();
-  
+
   const [showAddModal, setShowAddModal] = useState(false);
   const [newPlantData, setNewPlantData] = useState({
     plantId: '',
@@ -24,12 +24,15 @@ export const SupervisedPlants: React.FC = () => {
 
   const handleAddPlant = async () => {
     try {
+      // Solo pasar las propiedades que NO están excluidas en el tipo Omit
       await addPlantaSupervisada({
-        ...newPlantData,
+        plantId: newPlantData.plantId,
+        nombre: newPlantData.nombre,
+        ubicacion: newPlantData.ubicacion,
+        notas: newPlantData.notas,
         fechaInicio: new Date(),
-        activa: true,
-        createdAt: new Date(),
-        updatedAt: new Date()
+        activa: true
+        // NO incluir createdAt ni updatedAt, ya que están excluidos del tipo
       });
       setShowAddModal(false);
       setNewPlantData({ plantId: '', nombre: '', ubicacion: '', notas: '' });
@@ -44,8 +47,8 @@ export const SupervisedPlants: React.FC = () => {
       `¿Estás seguro de que quieres eliminar "${planta.nombre}"?`,
       [
         { text: 'Cancelar', style: 'cancel' },
-        { 
-          text: 'Eliminar', 
+        {
+          text: 'Eliminar',
           style: 'destructive',
           onPress: () => deletePlantaSupervisada(planta._id)
         }
@@ -112,28 +115,28 @@ export const SupervisedPlants: React.FC = () => {
         <View className="flex-1 justify-center items-center bg-black/50">
           <View className="bg-white rounded-lg p-6 w-11/12 max-w-md">
             <Text className="text-lg font-bold mb-4">Nueva Planta Supervisada</Text>
-            
+
             <TextInput
               placeholder="ID de la planta"
               value={newPlantData.plantId}
               onChangeText={(text) => setNewPlantData(prev => ({ ...prev, plantId: text }))}
               className="border border-gray-300 rounded px-3 py-2 mb-3"
             />
-            
+
             <TextInput
               placeholder="Nombre personalizado"
               value={newPlantData.nombre}
               onChangeText={(text) => setNewPlantData(prev => ({ ...prev, nombre: text }))}
               className="border border-gray-300 rounded px-3 py-2 mb-3"
             />
-            
+
             <TextInput
               placeholder="Ubicación"
               value={newPlantData.ubicacion}
               onChangeText={(text) => setNewPlantData(prev => ({ ...prev, ubicacion: text }))}
               className="border border-gray-300 rounded px-3 py-2 mb-3"
             />
-            
+
             <TextInput
               placeholder="Notas"
               value={newPlantData.notas}
@@ -142,7 +145,7 @@ export const SupervisedPlants: React.FC = () => {
               multiline
               numberOfLines={3}
             />
-            
+
             <View className="flex-row justify-end">
               <TouchableOpacity
                 onPress={() => setShowAddModal(false)}

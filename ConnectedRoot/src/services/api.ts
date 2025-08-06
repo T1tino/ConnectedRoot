@@ -1,7 +1,7 @@
 // src/services/api.ts
 import axios from 'axios';
 
-// 🚨 PROBLEMA SOLUCIONADO: No usar localhost en dispositivos móviles
+
 // Opción 1: Configuración automática por entorno
 const getApiBaseUrl = () => {
   if (__DEV__) {
@@ -15,9 +15,9 @@ const getApiBaseUrl = () => {
 };
 
 // Opción 2: Configuración manual (descomenta para usar)
-// const API_BASE_URL = 'http://TU_IP_LOCAL:3000/api'; // Ejemplo: http://192.168.1.105:3000/api
+const API_BASE_URL = 'http:192.168.0.11:3000/api'; // Ejemplo: http://192.168.1.105:3000/api
 
-const API_BASE_URL = getApiBaseUrl();
+// const API_BASE_URL = getApiBaseUrl();
 
 console.log('🌐 API Base URL:', API_BASE_URL); // Para debugging
 
@@ -121,7 +121,7 @@ export const apiService = {
   // === PLANTAS SUPERVISADAS ===
   async getPlantasSupervisadas(): Promise<PlantaSupervisada[]> {
     try {
-      const response = await api.get<ApiResponse<PlantaSupervisada[]>>('/plantas-supervisadas');
+      const response = await api.get<ApiResponse<PlantaSupervisada[]>>('/plantasSupervisadas');
       return response.data.data;
     } catch (error) {
       console.error('Error fetching supervised plants:', error);
@@ -131,7 +131,7 @@ export const apiService = {
 
   async getPlantaSupervisada(id: string): Promise<PlantaSupervisada> {
     try {
-      const response = await api.get<ApiResponse<PlantaSupervisada>>(`/plantas-supervisadas/${id}`);
+      const response = await api.get<ApiResponse<PlantaSupervisada>>(`/plantasSupervisadas/${id}`);
       return response.data.data;
     } catch (error) {
       console.error('Error fetching supervised plant:', error);
@@ -141,7 +141,7 @@ export const apiService = {
 
   async createPlantaSupervisada(data: Omit<PlantaSupervisada, '_id' | 'createdAt' | 'updatedAt'>): Promise<PlantaSupervisada> {
     try {
-      const response = await api.post<ApiResponse<PlantaSupervisada>>('/plantas-supervisadas', data);
+      const response = await api.post<ApiResponse<PlantaSupervisada>>('/plantasSupervisadas', data);
       return response.data.data;
     } catch (error) {
       console.error('Error creating supervised plant:', error);
@@ -151,7 +151,7 @@ export const apiService = {
 
   async updatePlantaSupervisada(id: string, data: Partial<PlantaSupervisada>): Promise<PlantaSupervisada> {
     try {
-      const response = await api.put<ApiResponse<PlantaSupervisada>>(`/plantas-supervisadas/${id}`, data);
+      const response = await api.put<ApiResponse<PlantaSupervisada>>(`/plantasSupervisadas/${id}`, data);
       return response.data.data;
     } catch (error) {
       console.error('Error updating supervised plant:', error);
@@ -161,7 +161,7 @@ export const apiService = {
 
   async deletePlantaSupervisada(id: string): Promise<void> {
     try {
-      await api.delete(`/plantas-supervisadas/${id}`);
+      await api.delete(`/plantasSupervisadas/${id}`);
     } catch (error) {
       console.error('Error deleting supervised plant:', error);
       throw error;
@@ -219,7 +219,7 @@ export const apiService = {
   async getEstadisticasPlanta(plantaSupervisadaId: string, dias: number = 7): Promise<any> {
     try {
       const response = await api.get(
-        `/plantas-supervisadas/${plantaSupervisadaId}/estadisticas?dias=${dias}`
+        `/plantasSupervisadas/${plantaSupervisadaId}/estadisticas?dias=${dias}`
       );
       return response.data.data;
     } catch (error) {
