@@ -23,6 +23,20 @@ MongoClient.connect(MONGODB_URI)
     console.error('❌ Error conectando a MongoDB:', error);
   });
 
+// ROUTE DE /api
+
+app.get('/api', (req, res) => {
+  res.json({
+    message: 'ConnectedRoot API',
+    endpoints: [
+      '/api/plantasSupervisadas',
+      '/api/plants',
+      '/api/health',
+      '/api/docs'
+    ]
+  });
+});
+
 // ROUTES PARA PLANTS
 app.get('/api/plants', async (req, res) => {
   try {
@@ -123,8 +137,8 @@ app.delete('/api/plantasSupervisadas/:id', async (req, res) => {
 // ROUTES PARA LECTURAS
 app.get('/api/lecturas/planta/:plantaId', async (req, res) => {
   try {
-    const lecturas = await db.collection('Lecturas').find({ 
-      plantaSupervisadaId: req.params.plantaId 
+    const lecturas = await db.collection('Lecturas').find({
+      plantaSupervisadaId: req.params.plantaId
     }).sort({ timestamp: -1 }).toArray();
     res.json(lecturas);
   } catch (error) {

@@ -7,6 +7,6 @@ export const getApiBaseUrl = async () => {
   
   return isLocalNetwork 
     // ? 'http://192.168.1.100:3000/api'  // Tu IP local
-    ? 'http://127.0.0.1:3000/api'  // Tu IP local
+    ? 'http://192.168.0.254:3000/api'  // Tu IP local
     : 'https://connectroot.com/api';
 }

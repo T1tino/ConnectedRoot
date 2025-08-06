@@ -7,10 +7,10 @@ import { Share } from 'react-native';
 const getApiBaseUrl = () => {
   if (__DEV__) {
     // Para desarrollo - reemplaza con tu IP local
-    return 'http://192.168.0.11:3000/api'; 
+    return 'http://192.168.0.254:3000/api'; 
   } else {
     // Para producción
-    return 'https://tu-servidor-produccion.com/api';
+    return 'https://ConnectedRoot.com/api';
   }
 };
 

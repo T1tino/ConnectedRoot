@@ -7,7 +7,7 @@ const getApiBaseUrl = () => {
   if (__DEV__) {
     // 🔄 CAMBIA ESTA IP POR LA IP DE TU COMPUTADORA LOCAL
     // Para encontrar tu IP: Windows = ipconfig, Mac/Linux = ifconfig
-    return 'http://192.168.0.11:3000/api'; // ⚠️ REEMPLAZA 192.168.1.100 con tu IP real
+    return 'http://192.168.0.254:3000/api'; // ⚠️ REEMPLAZA 192.168.1.100 con tu IP real
   } else {
     // En producción usarías tu servidor real
     return 'https://tu-servidor-produccion.com/api';
@@ -15,7 +15,7 @@ const getApiBaseUrl = () => {
 };
 
 // Opción 2: Configuración manual (descomenta para usar)
-const API_BASE_URL = 'http:192.168.0.11:3000/api'; // Ejemplo: http://192.168.1.105:3000/api
+const API_BASE_URL = 'http://192.168.0.254:3000/api'; // Ejemplo: http://192.168.1.105:3000/api
 
 // const API_BASE_URL = getApiBaseUrl();
 
