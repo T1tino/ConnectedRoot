@@ -1,4 +1,4 @@
-// src/screens/HomeScreen.tsx
+// src/screens/HomeScreen.tsx - Con debugging mejorado
 import React, { useEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { TouchableOpacity, View, Text, FlatList, Image, ActivityIndicator, RefreshControl } from 'react-native';
@@ -33,25 +33,33 @@ const HomeScreen: React.FC = () => {
   const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
+    // 🐛 DEBUG: Logging para verificar que solo carga plantas supervisadas
+    console.log('🏠 HomeScreen: Mounting component, loading supervised plants...');
+    
     // Cargar plantas supervisadas con detalles al montar el componente
     fetchWithDetails();
   }, [fetchWithDetails]);
 
   const handleRefresh = async () => {
+    console.log('🔄 HomeScreen: User initiated refresh');
     setRefreshing(true);
     try {
       await fetchWithDetails();
+      console.log('✅ HomeScreen: Refresh completed successfully');
+    } catch (refreshError) {
+      console.error('❌ HomeScreen: Refresh failed:', refreshError);
     } finally {
       setRefreshing(false);
     }
   };
 
   const handlePlantPress = (plantId: string) => {
-    navigation.navigate('PlantInfoScreen', { id: plantId });
+    console.log('🌱 HomeScreen: User tapped on plant:', plantId);
+    navigation.navigate('PlantInfo', { id: plantId });
   };
 
   const getPlantStatus = (plant: PlantaSupervisadaWithDetails) => {
-    if (!plant.activa) return { color: '#gray', text: 'Inactiva' };
+    if (!plant.activa) return { color: '#6B7280', text: 'Inactiva' };
     
     if (plant.ultimaLectura) {
       const horasDesdeUltimaLectura = (Date.now() - new Date(plant.ultimaLectura.timestamp).getTime()) / (1000 * 60 * 60);
@@ -198,12 +206,23 @@ const HomeScreen: React.FC = () => {
     );
   };
 
+  // 🐛 DEBUG: Logging del estado actual
+  console.log('🏠 HomeScreen Render State:', {
+    loading,
+    error,
+    plantCount: plantasSupervisadasWithDetails.length,
+    refreshing
+  });
+
   if (loading && plantasSupervisadasWithDetails.length === 0) {
     return (
       <ScreenWrapper title="Plantas Supervisadas">
         <View className="flex-1 justify-center items-center">
           <ActivityIndicator size="large" color="#10B981" />
           <Text className="text-gray-600 mt-4">Cargando plantas supervisadas...</Text>
+          <Text className="text-gray-400 mt-2 text-sm text-center">
+            🚀 Optimizado: Solo tus plantas, no todo el catálogo
+          </Text>
         </View>
       </ScreenWrapper>
     );
@@ -233,6 +252,34 @@ const HomeScreen: React.FC = () => {
 
   return (
     <ScreenWrapper title="Plantas Supervisadas">
+      {/* 🎯 NUEVO: Header con estadísticas */}
+      {plantasSupervisadasWithDetails.length > 0 && (
+        <View className="px-4 py-2 bg-white rounded-lg mb-4 mx-4">
+          <View className="flex-row justify-between items-center">
+            <View>
+              <Text className="text-2xl font-bold text-green-800">
+                {plantasSupervisadasWithDetails.length}
+              </Text>
+              <Text className="text-sm text-gray-600">supervisadas</Text>
+            </View>
+            
+            <View>
+              <Text className="text-lg font-semibold text-blue-600">
+                {plantasSupervisadasWithDetails.filter(p => p.activa).length}
+              </Text>
+              <Text className="text-sm text-gray-600">activas</Text>
+            </View>
+            
+            <View>
+              <Text className="text-lg font-semibold text-orange-600">
+                {plantasSupervisadasWithDetails.filter(p => p.ultimaLectura).length}
+              </Text>
+              <Text className="text-sm text-gray-600">con datos</Text>
+            </View>
+          </View>
+        </View>
+      )}
+
       <FlatList
         data={plantasSupervisadasWithDetails}
         keyExtractor={(item) => item._id}
@@ -256,13 +303,17 @@ const HomeScreen: React.FC = () => {
               Comienza supervisando alguna planta desde el catálogo
             </Text>
             <TouchableOpacity
-              onPress={() => navigation.navigate('PlantInfoScreen')}
+              onPress={() => navigation.navigate('Explore')}
               className="bg-green-500 px-6 py-3 rounded-lg mt-6"
             >
               <Text className="text-white font-medium">Explorar catálogo</Text>
             </TouchableOpacity>
           </View>
         }
+        // 🎯 OPTIMIZACIÓN: Performance improvements
+        removeClippedSubviews={true}
+        maxToRenderPerBatch={5}
+        windowSize={8}
       />
     </ScreenWrapper>
   );

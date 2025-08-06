@@ -1,13 +1,13 @@
-// src/hooks/usePlantasSupervisadas.ts
+// src/hooks/usePlantasSupervisadas.ts - OPTIMIZADO para no cargar todo el catálogo
 import { useState, useCallback } from 'react';
 import { PlantaSupervisada, PlantaSupervisadaWithDetails } from '../../types/database';
-import { database } from '../../types/database';
+import { api } from '../services/api';
 
 interface UsePlantasSupervisadasReturn {
-  // Datos con detalles completos
+  // Datos con detalles completos (lo que usa tu HomeScreen)
   plantasSupervisadasWithDetails: PlantaSupervisadaWithDetails[];
   
-  // Datos básicos (para componentes que solo necesitan info básica)
+  // Datos básicos (para compatibilidad)
   plantasSupervisadas: PlantaSupervisada[];
   
   // Estados de carga y error
@@ -30,26 +30,71 @@ export const usePlantasSupervisadas = (): UsePlantasSupervisadasReturn => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Cargar plantas supervisadas con detalles completos
+  // 🚀 OPTIMIZACIÓN PRINCIPAL: No cargar todo el catálogo
   const fetchWithDetails = useCallback(async (): Promise<void> => {
     setLoading(true);
     setError(null);
 
     try {
-      // Cargar datos con detalles (incluye info de la planta y últimas lecturas)
-      const dataWithDetails = await database.getPlantasSupervisadasWithDetails();
+      console.log('🚀 Hook: Loading supervised plants (OPTIMIZED - no full catalog)...');
       
-      // También cargar datos básicos para compatibilidad
-      const basicData = await database.getPlantasSupervisadas();
+      // PASO 1: Solo cargar plantas supervisadas
+      const supervisadas = await api.getPlantasSupervisadas();
+      setPlantasSupervisadas(supervisadas);
+      console.log(`📋 Loaded ${supervisadas.length} supervised plants`);
+      
+      if (supervisadas.length === 0) {
+        console.log('📭 No supervised plants found');
+        setPlantasSupervisadasWithDetails([]);
+        return;
+      }
+
+      // PASO 2: Para cada planta supervisada, cargar SOLO sus datos específicos
+      const dataWithDetails: PlantaSupervisadaWithDetails[] = [];
+      
+      for (const supervisada of supervisadas) {
+        try {
+          console.log(`🌱 Loading details for supervised plant: ${supervisada._id}`);
+          
+          // Solo cargar la planta específica (no todo el catálogo)
+          const plantData = supervisada.plantId ? 
+            await api.getPlant(supervisada.plantId) : 
+            null;
+          
+          // Solo cargar la lectura más reciente de esta planta
+          const lecturasRecientes = await api.getLecturasRecientes(supervisada._id, 1);
+          
+          dataWithDetails.push({
+            ...supervisada,
+            plantData: plantData || undefined,
+            ultimaLectura: lecturasRecientes[0] || undefined,
+          });
+          
+          console.log(`✅ Loaded details for: ${supervisada.nombre || plantData?.nombreComun || 'Unknown'}`);
+          
+        } catch (detailError) {
+          console.warn(`⚠️ Could not load full details for supervised plant ${supervisada._id}:`, detailError);
+          
+          // Agregar sin detalles completos si hay error con una planta específica
+          dataWithDetails.push({
+            ...supervisada,
+            plantData: undefined,
+            ultimaLectura: undefined,
+          });
+        }
+      }
       
       setPlantasSupervisadasWithDetails(dataWithDetails);
-      setPlantasSupervisadas(basicData);
+      console.log(`✅ Successfully loaded ${dataWithDetails.length} supervised plants with details (OPTIMIZED)`);
       
-      console.log(`✅ Loaded ${dataWithDetails.length} supervised plants with details`);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Error cargando plantas supervisadas';
       setError(errorMessage);
       console.error('❌ Error fetching plantas supervisadas:', err);
+      
+      // En caso de error total, limpiar datos
+      setPlantasSupervisadasWithDetails([]);
+      setPlantasSupervisadas([]);
     } finally {
       setLoading(false);
     }
@@ -60,9 +105,9 @@ export const usePlantasSupervisadas = (): UsePlantasSupervisadasReturn => {
     data: Omit<PlantaSupervisada, '_id' | 'createdAt' | 'updatedAt'>
   ): Promise<PlantaSupervisada | null> => {
     try {
-      console.log('🌱 Adding new supervised plant:', data);
+      console.log('🌱 Adding new supervised plant:', data.nombre);
       
-      const newPlanta = await database.createPlantaSupervisada(data);
+      const newPlanta = await api.createPlantaSupervisada(data);
       
       if (newPlanta) {
         // Actualizar lista básica
@@ -91,7 +136,7 @@ export const usePlantasSupervisadas = (): UsePlantasSupervisadasReturn => {
     try {
       console.log('🔄 Updating supervised plant:', id, data);
       
-      const updatedPlanta = await database.updatePlantaSupervisada(id, data);
+      const updatedPlanta = await api.updatePlantaSupervisada(id, data);
       
       if (updatedPlanta) {
         // Actualizar en lista básica
@@ -121,7 +166,7 @@ export const usePlantasSupervisadas = (): UsePlantasSupervisadasReturn => {
     try {
       console.log('🗑️ Deleting supervised plant:', id);
       
-      const success = await database.deletePlantaSupervisada(id);
+      const success = await api.deletePlantaSupervisada(id);
       
       if (success) {
         // Remover de ambas listas

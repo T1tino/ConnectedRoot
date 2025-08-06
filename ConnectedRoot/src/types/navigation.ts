@@ -72,7 +72,7 @@ export type ExploreScreenNavigationProp = BottomTabNavigationProp<
 // PlantInfoScreen Navigation
 export type PlantInfoScreenNavigationProp = BottomTabNavigationProp<
   BottomTabParamList,
-  'PlantInfoScreen'
+  'PlantInfo'
 >;
 
 // ProfileScreen Navigation
@@ -94,7 +94,7 @@ import { RouteProp } from '@react-navigation/native';
 
 export type PlantInfoScreenRouteProp = RouteProp<
   BottomTabParamList,
-  'PlantInfoScreen'
+  'PlantInfo'
 >;
 
 // =======================================
