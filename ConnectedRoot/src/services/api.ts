@@ -4,7 +4,7 @@ export class ApiService {
   private baseURL: string;
 
   constructor() {
-    this.baseURL = 'http://192.168.128.196:3000/api';
+    this.baseURL = `${API_BASE_URL}`;
     console.log('🌐 API Base URL:', this.baseURL);
   }
 
